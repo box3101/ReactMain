@@ -4,11 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 
-
 //main
 import Visual from './components/main/Visual';
 import Content from './components/main/Content';
-
 
 //sub
 import Community from './components/sub/Community';
