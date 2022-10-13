@@ -1,12 +1,14 @@
+// useRef , useEffect 사용
 import { useRef, useEffect } from 'react'
 
-//prop 부모에서 자식에게 매개변수 속성을 가져온다.
+//매개변수를 받아옴
 function Layout(props) {
 
   // useRef 로 특정 DOM 선택하기
   const frame = useRef(null);
 
   // useEffect 라는 Hook 을 사용하여 컴포넌트가 마운트 됐을 때(처음 나타났을 때), 언마운트 됐을 때(사라질 때), 그리고 업데이트 될 때(특정 props가 바뀔 때) 특정 작업을 처리하는 방법
+
   useEffect(() => {
     // 마운트되었을때
     frame.current.classList.add("on");
