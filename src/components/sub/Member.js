@@ -1,8 +1,11 @@
-import Layout from "../common/Layout";
+import Layout from '../common/Layout';
 
-export default function Member() {
+function Member() {
     return (
-        <Layout name={'Member'} title={'Member'}>
+        <Layout name={'Member'}>
+            <p>Member contents</p>
         </Layout>
+
     );
 }
+export default Member;
