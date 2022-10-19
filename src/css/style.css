@@ -124,6 +124,9 @@ header .inner h1 a {
   font: bold 24px/1 "arial";
   color: #fff;
 }
+header .inner h1 img {
+  height: 30px;
+}
 header .inner #gnb {
   position: absolute;
   bottom: 0px;
@@ -146,6 +149,7 @@ header .inner .fa-bars {
   display: none;
 }
 header.sub {
+  border-bottom: 1px solid #bbb;
   background: #fff;
 }
 header.sub .inner h1 a {
@@ -158,17 +162,17 @@ header.sub .inner .fa-bars {
   color: #333;
 }
 header.main {
-  background: #fff;
+  background: #000;
   border-bottom: 1px solid #ccc;
 }
 header.main .inner h1 a {
-  color: #555;
+  color: #fff;
 }
 header.main .inner #gnb li a {
-  color: #555;
+  color: #fff;
 }
 header.main .inner .fa-bars {
-  color: #ddd;
+  color: #fff;
 }
 
 @media screen and (max-width: 1179px) {
@@ -238,6 +242,99 @@ main {
   z-index: 1;
 }
 
+.Community > .inner .inputBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+.Community > .inner .inputBox input[type=text],
+.Community > .inner .inputBox textarea {
+  width: 50%;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+  resize: none;
+}
+.Community > .inner .inputBox .btnSet button {
+  margin: 0 20px;
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.Community > .inner .showBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px;
+}
+.Community > .inner .showBox article {
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Community > .inner .showBox article .ediTxt {
+  width: 60%;
+}
+.Community > .inner .showBox article .ediTxt input[type=text],
+.Community > .inner .showBox article .ediTxt textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid lightblue;
+  margin-bottom: 20px;
+  background: #eaf9f9;
+  resize: none;
+}
+.Community > .inner .showBox article .btnSet {
+  display: flex;
+  align-items: center;
+}
+.Community > .inner .showBox article .btnSet button {
+  background: transparent;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+}
+.Community > .inner .showBox article .btnSet button:nth-of-type(1) {
+  color: orange;
+}
+.Community > .inner .showBox article .btnSet button:nth-of-type(2) {
+  color: orangered;
+}
+
+@media screen and (max-width: 1179px) {
+  .Community > .inner .inputBox input[type=text],
+.Community > .inner .inputBox tetarea {
+    width: 100%;
+  }
+  .Community > .inner .inputBox .btnSet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Community > .inner .inputBox .btnSet button {
+    width: 47%;
+    margin-right: 0px;
+  }
+  .Community > .inner .showBox article .editTxt,
+.Community > .inner .showBox article .txt {
+    width: 100%;
+  }
+  .Community > .inner .showBox article .btnSet {
+    margin-top: 20px;
+  }
+  .Community > .inner .showBox article .btnSet button {
+    margin-left: 0px;
+  }
+}
 .Department > .inner::after {
   content: "";
   display: block;
