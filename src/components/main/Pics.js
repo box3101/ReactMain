@@ -1,6 +1,6 @@
 function Pics() {
   return (
-    <main id="Pics">
+    <main id="pics">
       <h1>Pics</h1>
     </main>
   )

@@ -9,10 +9,10 @@ header {
 
 		h1 {
 			position: absolute;
-			bottom: 20px;
+			bottom: 10px;
 			left: 0px;
 			a {
-				font: bold 24px/1 "arial";
+				font: bold 24px/1 'arial';
 				color: #fff;
 			}
 			img {
@@ -28,7 +28,7 @@ header {
 				a {
 					display: inline-block;
 					padding: 20px 30px;
-					font: bold 14px/1 "arial";
+					font: bold 14px/1 'arial';
 					color: #fff;
 				}
 			}
@@ -42,7 +42,7 @@ header {
 		}
 	}
 	&.sub {
-		border-bottom: 1px solid #bbb;
+		border-bottom: 1px solid #999;
 		background: #fff;
 		.inner {
 			h1 a {

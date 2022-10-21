@@ -31,7 +31,7 @@ fieldset {
 
 .h {
   position: absolute;
-  top: -99999px;
+  top: -999999px;
   opacity: 0;
 }
 
@@ -117,7 +117,7 @@ header .inner {
 }
 header .inner h1 {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 0px;
 }
 header .inner h1 a {
@@ -149,7 +149,7 @@ header .inner .fa-bars {
   display: none;
 }
 header.sub {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #999;
   background: #fff;
 }
 header.sub .inner h1 a {
@@ -222,18 +222,30 @@ header.main .inner .fa-bars {
   cursor: pointer;
 }
 
-main {
-  width: 1180px;
-  min-height: 500px;
-  margin: 150px auto;
+#news {
+  width: 100%;
+  height: 100vh;
+  background: #c6ffc6;
+  position: relative;
+  padding: 10vw;
 }
 
-@media screen and (max-width: 1179px) {
-  main {
-    width: 100%;
-    padding: 0px 40px;
-  }
+#pics {
+  width: 100%;
+  height: 100vh;
+  background: #c6fcff;
+  position: relative;
+  padding: 10vw;
 }
+
+#vids {
+  width: 100%;
+  height: 100vh;
+  background: #eeffc6;
+  position: relative;
+  padding: 10vw;
+}
+
 #visual {
   width: 100%;
   height: 100vh;
@@ -257,7 +269,6 @@ main {
   resize: none;
 }
 .Community > .inner .inputBox .btnSet button {
-  margin: 0 20px;
   width: 150px;
   height: 30px;
   display: inline-block;
@@ -265,7 +276,7 @@ main {
   background: #555;
   color: #fff;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 .Community > .inner .showBox {
   width: 100%;
@@ -279,13 +290,13 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  align-content: center;
 }
-.Community > .inner .showBox article .ediTxt {
+.Community > .inner .showBox article .editTxt {
   width: 60%;
 }
-.Community > .inner .showBox article .ediTxt input[type=text],
-.Community > .inner .showBox article .ediTxt textarea {
+.Community > .inner .showBox article .editTxt input[type=text],
+.Community > .inner .showBox article .editTxt textarea {
   width: 100%;
   padding: 8px 10px;
   border: 1px solid lightblue;
@@ -312,7 +323,7 @@ main {
 
 @media screen and (max-width: 1179px) {
   .Community > .inner .inputBox input[type=text],
-.Community > .inner .inputBox tetarea {
+.Community > .inner .inputBox textarea {
     width: 100%;
   }
   .Community > .inner .inputBox .btnSet {
@@ -461,11 +472,8 @@ main {
   padding: 15px 30px;
 }
 .Member > .inner table td input[type=text],
-.Member > .inner table td input[type=password] {
-  width: 40%;
-  border: 1px solid #aaa;
-  padding: 6px 10px;
-}
+.Member > .inner table td input[type=password],
+.Member > .inner table td select,
 .Member > .inner table td textarea {
   width: 40%;
   border: 1px solid #aaa;
@@ -475,7 +483,8 @@ main {
 .Member > .inner table td label {
   margin-right: 6px;
 }
-.Member > .inner table td input[type=radio] {
+.Member > .inner table td input[type=radio],
+.Member > .inner table td input[type=checkbox] {
   margin-right: 20px;
 }
 .Member > .inner table td .err {
@@ -484,6 +493,43 @@ main {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 1179px) {
+  .Member > .inner table td input[type=text],
+.Member > .inner table td input[type=password],
+.Member > .inner table td select,
+.Member > .inner table td textarea {
+    width: 80%;
+  }
+  .Member > .inner table td .err {
+    display: block;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .Member > .inner table th {
+    display: none;
+    padding: 15px 0px;
+  }
+  .Member > .inner table th:last-child {
+    display: block;
+    width: 100%;
+  }
+  .Member > .inner table th input[type=reset],
+.Member > .inner table th input[type=submit] {
+    width: 48%;
+    margin: 0px;
+  }
+  .Member > .inner table td {
+    border-left: none;
+    padding: 15px 0px;
+  }
+  .Member > .inner table td input[type=text],
+.Member > .inner table td input[type=password],
+.Member > .inner table td select,
+.Member > .inner table td textarea {
+    width: 100%;
+  }
+}
 .Youtube article {
   border-top: 1px solid #aaa;
   padding: 20px 0px;

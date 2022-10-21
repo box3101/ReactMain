@@ -1,6 +1,6 @@
 function News() {
   return (
-    <main id="News">
+    <main id="news">
       <h1>News</h1>
     </main>
   )
