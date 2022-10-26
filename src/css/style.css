@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
 @import url("https://use.typekit.net/pky6mfq.css");
 * {
   margin: 0px;
@@ -36,61 +35,6 @@ fieldset {
   opacity: 0;
 }
 
-@font-face {
-  font-family: "margo_scriptregular";
-  src: url("https://www.wearebrandcollective.com/fonts/margoscript-regular-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/margoscript-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_nova_rgregular";
-  src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_reg-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proxima_nova_reg-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_novasemibold_italic";
-  src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold_italic-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold_italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_novasemibold";
-  src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_novablack_italic";
-  src: url("https://www.wearebrandcollective.com/fonts/proximanova-blackit-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-blackit-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_novaextrabold_italic";
-  src: url("https://www.wearebrandcollective.com/fonts/proximanova-extrabldit-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-extrabldit-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_novathin";
-  src: url("https://www.wearebrandcollective.com/fonts/proximanova-thin-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-thin-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima_novathin_italic";
-  src: url("https://www.wearebrandcollective.com/fonts/proximanova-thinit-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-thinit-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Vanitas";
-  src: url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.eot");
-  src: url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.woff") format("woff"), url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 footer {
   width: 100%;
   border-top: 1px solid #bbb;
@@ -115,14 +59,12 @@ footer .inner p {
   }
 }
 .content figure {
-  width: 100%;
-  height: 300px;
-  background: #bbb;
-  opacity: 0;
-  transition: 1s;
+  margin-top: 10% !important;
+  margin-bottom: 2% !important;
+  padding-top: 3% !important;
 }
 .content > .inner {
-  width: 1600px;
+  width: 1400px;
   min-height: 400px;
   margin: 100px auto 150px;
   position: relative;
@@ -131,17 +73,25 @@ footer .inner p {
   transition: 0.5s;
 }
 .content > .inner h1 {
-  font: normal 60px/1 "work sans";
+  text-align: center;
+  /* font: normal 60px/1 "work sans"; */
   color: #111;
   margin-bottom: 70px;
+  font-family: "freight-big-pro", serif !important;
+  font-size: 95px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: -64px;
 }
 .content > .inner h1::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 1px;
+  width: 600px;
+  height: 51px;
   background: #555;
-  margin-top: 20px;
+  margin: 0 auto;
+  background: url(../../../public/img/underline.png);
+  background-size: cover;
 }
 .content.on figure {
   opacity: 1;
@@ -262,7 +212,7 @@ header {
 }
 header .inner {
   position: relative;
-  width: 1600px;
+  width: 1450px;
   height: 100px;
   margin: 0 auto;
   margin-top: 12px;
@@ -292,6 +242,7 @@ header .inner #gnb li a {
   padding: 20px 30px;
   font: bold 14px/1 "arial";
   color: #fff;
+  font-family: "proxima_nova_rgregular";
 }
 header .inner .fa-bars {
   font-size: 24px;
@@ -299,10 +250,6 @@ header .inner .fa-bars {
   bottom: 20px;
   right: 40px;
   display: none;
-}
-header.sub {
-  border-bottom: 1px solid #999;
-  background: #fff;
 }
 header.sub .inner h1 a {
   color: #222;
@@ -441,11 +388,9 @@ header.main .inner .fa-bars {
 
 #vids {
   width: 100%;
-  height: 40vh;
+  height: 800px;
   background: url(../../../public/img/bg-vids.jpg) no-repeat;
   position: relative;
-  background-attachment: fixed;
-  padding: 6vw 7vw;
 }
 #vids .swiper {
   height: 100%;
@@ -501,7 +446,7 @@ header.main .inner .fa-bars {
   margin-bottom: 12px;
 }
 .visual__aside ul li a svg {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: #fff;
 }
 .visual__txt {
@@ -513,8 +458,8 @@ header.main .inner .fa-bars {
 }
 .visual__txt h1 {
   color: #fff;
-  font-size: 5rem;
-  line-height: 1.2;
+  font-size: 4.2rem;
+  line-height: 1;
   font-weight: 400;
   font-family: "freight-big-pro", serif !important;
   text-align: center;
@@ -817,9 +762,6 @@ header.main .inner .fa-bars {
     width: 100%;
   }
 }
-.Location figure {
-  background: lightblue;
-}
 .Location #map {
   width: 100%;
   height: 500px;
@@ -857,9 +799,6 @@ header.main .inner .fa-bars {
   color: #fff;
 }
 
-.Member figure {
-  background: lightgreen;
-}
 .Member > .inner table {
   width: 100%;
   border: none;

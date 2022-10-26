@@ -12,7 +12,7 @@ export default function Header(props) {
     let url = '';
     props.type === 'main'
         ? (url = process.env.PUBLIC_URL + '/img/logo_w.png')
-        : (url = process.env.PUBLIC_URL + '/img/logo_b.png')
+        : (url = process.env.PUBLIC_URL + '/img/logo_w.png')
 
     return (
         <header className={props.type}>

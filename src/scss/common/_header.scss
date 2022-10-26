@@ -8,7 +8,7 @@ header {
 	top: 0;
 	.inner {
 		position: relative;
-		width: 1600px;
+		width: 1450px;
 		height: 100px;
 		margin: 0 auto;
 		margin-top: 12px;
@@ -36,6 +36,7 @@ header {
 					padding: 20px 30px;
 					font: bold 14px/1 "arial";
 					color: #fff;
+					font-family: "proxima_nova_rgregular";
 				}
 			}
 		}
@@ -48,8 +49,6 @@ header {
 		}
 	}
 	&.sub {
-		border-bottom: 1px solid #999;
-		background: #fff;
 		.inner {
 			h1 a {
 				color: #222;

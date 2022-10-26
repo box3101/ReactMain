@@ -1,6 +1,5 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Library } from "@fortawesome/fontawesome-svg-core";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faBlog } from "@fortawesome/free-solid-svg-icons";
@@ -46,7 +45,8 @@ export default function Visual() {
             </div>
             <div className="visual__txt">
                 <h1>
-                    Cy_React_Portfolio
+                    BUILDING BRANDS WITH AN <br />
+                    UNWAVERING PRESENCE
                 </h1>
                 <p>
                     <span className="bar"></span>
