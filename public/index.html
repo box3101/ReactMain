@@ -55,7 +55,7 @@
     const mask = document.querySelector('.mask');
     // tags = 빈값
     let tags = '';
-    const baseURL = 'https://box3101.github.io/ReactMain/';
+    const baseURL = 'http://localhost:3000/ReactMain#/img/';
     // imgs 배열에 url img들 추가
     const imgs = [
       baseURL + 'Community.jpg',
@@ -72,6 +72,12 @@
 
     // 함수실행
     createDOM();
+
+    //Promise.all()로 loadImg, loadVid 함수가 모두 프로미스를 객체를 반환할때까지 동기화
+    Promise.all([loadImg(), loadVid()])
+      .then(result => {
+        console.log(result);
+      })
 
     // 돔 생성함수
     function createDOM() {
@@ -98,7 +104,7 @@
             // 카운터이미지를 1씩 증가.
             countImg++;
             console.log("img loaded", countImg);
-            // 카운터 이미지들이 모든 imgs 배열에 있는 이미지와 같을때 true
+            // 카운터 이미지들이 모든 imgs 배열에 있는 이미지와 같을때 promise res true
             if (countImg === imgs.length) res(true);
           }
         });
