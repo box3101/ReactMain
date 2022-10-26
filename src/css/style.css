@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
+@import url("https://use.typekit.net/pky6mfq.css");
 * {
   margin: 0px;
   padding: 0px;
@@ -35,6 +36,61 @@ fieldset {
   opacity: 0;
 }
 
+@font-face {
+  font-family: "margo_scriptregular";
+  src: url("https://www.wearebrandcollective.com/fonts/margoscript-regular-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/margoscript-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_nova_rgregular";
+  src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_reg-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proxima_nova_reg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novasemibold_italic";
+  src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold_italic-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold_italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novasemibold";
+  src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novablack_italic";
+  src: url("https://www.wearebrandcollective.com/fonts/proximanova-blackit-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-blackit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novaextrabold_italic";
+  src: url("https://www.wearebrandcollective.com/fonts/proximanova-extrabldit-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-extrabldit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novathin";
+  src: url("https://www.wearebrandcollective.com/fonts/proximanova-thin-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_novathin_italic";
+  src: url("https://www.wearebrandcollective.com/fonts/proximanova-thinit-webfont.woff2") format("woff2"), url("https://www.wearebrandcollective.com/fonts/proximanova-thinit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vanitas";
+  src: url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.eot");
+  src: url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.woff") format("woff"), url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 footer {
   width: 100%;
   border-top: 1px solid #bbb;
@@ -66,7 +122,7 @@ footer .inner p {
   transition: 1s;
 }
 .content > .inner {
-  width: 1180px;
+  width: 1600px;
   min-height: 400px;
   margin: 100px auto 150px;
   position: relative;
@@ -105,15 +161,111 @@ footer .inner p {
     padding: 0px 40px;
   }
 }
+.com-type01 {
+  position: relative;
+  transform: translateX(-115px) translateY(115px);
+  background: #fff;
+  padding: 100px 120px 120px 120px;
+}
+.com-type01 .num {
+  position: absolute;
+  top: -59px;
+  right: 80px;
+  color: #4a4a4a;
+  font-family: "proxima_nova_rgregular", serif !important;
+  font-weight: 100;
+  font-size: 6rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+.com-type01 .num::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 700px;
+  margin-right: 20px;
+  height: 1px;
+  background: #333;
+}
+.com-type01 h2 {
+  font-family: "freight-big-pro", serif !important;
+  font-size: 45px;
+  line-height: 1.3;
+  color: #0b3a29;
+  font-weight: 100;
+}
+.com-type01 h3 {
+  margin-top: 40px;
+  font-family: "proxima_nova_rgregular" !important;
+  color: #073534 !important;
+  font-size: 1.2rem !important;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.com-type01 a {
+  display: inline-block;
+  margin-top: 40px;
+  color: #8b572a;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.8rem;
+  letter-spacing: 0px !important;
+  opacity: 0.8;
+  font-family: "freight-big-pro", serif;
+}
+.com-type01.typ2 .num {
+  display: flex;
+  align-items: flex-start;
+  top: -81px;
+  left: 0;
+  right: auto;
+}
+.com-type01.typ2 .num::before {
+  left: 3vw;
+  width: 1px;
+  height: 737px;
+  top: 117px;
+  transform: initial;
+  margin-top: 53px;
+  margin-right: 0;
+}
+.com-type01.typ3 .num {
+  display: flex;
+  align-items: flex-start;
+  top: -286px;
+  left: auto;
+  right: 16px;
+  flex-direction: column;
+}
+.com-type01.typ3 .num::before {
+  left: 3vw;
+  width: 1px;
+  height: 737px;
+  top: -90px;
+  transform: initial;
+  margin-top: 53px;
+  margin-right: 0;
+}
+
 header {
   width: 100%;
-  background: #222;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
 }
 header .inner {
-  width: 1180px;
-  height: 80px;
-  margin: 0 auto;
   position: relative;
+  width: 1600px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 12px;
 }
 header .inner h1 {
   position: absolute;
@@ -125,11 +277,11 @@ header .inner h1 a {
   color: #fff;
 }
 header .inner h1 img {
-  height: 30px;
+  height: 48px;
 }
 header .inner #gnb {
   position: absolute;
-  bottom: 0px;
+  top: 15px;
   right: 0px;
 }
 header .inner #gnb li {
@@ -155,21 +307,23 @@ header.sub {
 header.sub .inner h1 a {
   color: #222;
 }
+header.sub .inner h1 a img {
+  filter: invert(1);
+}
 header.sub .inner #gnb li a {
   color: #333;
 }
 header.sub .inner .fa-bars {
   color: #333;
 }
-header.main {
-  background: #000;
-  border-bottom: 1px solid #ccc;
-}
 header.main .inner h1 a {
   color: #fff;
 }
 header.main .inner #gnb li a {
   color: #fff;
+  font-size: 13px;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 header.main .inner .fa-bars {
   color: #fff;
@@ -224,26 +378,99 @@ header.main .inner .fa-bars {
 
 #news {
   width: 100%;
-  height: 100vh;
-  background: #c6ffc6;
   position: relative;
-  padding: 10vw;
+  padding: 0vw 7vw;
+  padding-top: 6vw;
+}
+
+.news > .inner.p0-50 {
+  padding: 0 50px;
+}
+.news__row {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+.news__row:nth-of-type(2) {
+  margin-top: 240px;
+}
+.news__row:nth-of-type(2) .com-type01 {
+  transform: translate(0);
+}
+.news__row:nth-of-type(2) .news__txt-wrap:nth-of-type(2) .com-type01 {
+  transform: translateX(-115px) translateY(-115px);
+}
+.news__row .lef,
+.news__row .ref {
+  flex: 1;
+}
+.news__row .lef {
+  margin-right: 100px;
+  display: grid;
+  flex: 1.2;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.news__row .lef .news__img {
+  order: 1;
+}
+.news__row .lef .news__txt-wrap {
+  order: 0;
+  align-self: flex-start;
+}
+.news__row .lef img {
+  width: 515px;
+}
+.news__img {
+  flex: 0 0 55%;
+}
+.news__img img {
+  width: 100%;
+}
+.news__txt-wrap {
+  flex: 0 0 55%;
 }
 
 #pics {
   width: 100%;
   height: 100vh;
-  background: #c6fcff;
+  background: #e7d4c7;
   position: relative;
-  padding: 10vw;
+  padding: 6vw 7vw;
 }
 
 #vids {
   width: 100%;
-  height: 100vh;
-  background: #eeffc6;
+  height: 40vh;
+  background: url(../../../public/img/bg-vids.jpg) no-repeat;
   position: relative;
-  padding: 10vw;
+  background-attachment: fixed;
+  padding: 6vw 7vw;
+}
+#vids .swiper {
+  height: 100%;
+}
+#vids .swiper .swiper-slide {
+  width: 100%;
+}
+#vids .swiper .swiper-slide .inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 50px/1 "arial";
+  color: #666;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.5s, transform 0.5s;
+}
+#vids .swiper .swiper-slide.swiper-slide-active .inner {
+  opacity: 1;
+  transform: scale(1);
+  font-size: 20px;
+  text-align: center;
+  color: #333;
 }
 
 #visual {
@@ -252,6 +479,86 @@ header.main .inner .fa-bars {
   background: #555;
   position: relative;
   z-index: 1;
+}
+
+.visual {
+  position: relative;
+}
+.visual__img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.visual__aside {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7vw;
+}
+.visual__aside ul li a {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.visual__aside ul li a svg {
+  font-size: 1.3rem;
+  color: #fff;
+}
+.visual__txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 66%;
+}
+.visual__txt h1 {
+  color: #fff;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "freight-big-pro", serif !important;
+  text-align: center;
+}
+.visual__txt p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  top: 120px;
+  right: -100px;
+  text-align: right;
+  font-family: marco, serif;
+  line-height: 1em;
+  opacity: 0.8;
+  font-size: 3vh;
+  color: #fff;
+  font-weight: 300;
+  font-style: italic;
+}
+.visual__txt p .bar {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 300px;
+  background: #fff;
+  height: 1px;
+  margin-right: 20px;
+}
+
+.message {
+  width: 100%;
+  height: 100vh;
+  background: #e7d4c7;
+  position: relative;
+  padding: 6vw 7vw;
+}
+
+.review {
+  width: 100%;
+  height: 100vh;
+  background: #e7d4c7;
+  position: relative;
+  padding: 6vw 7vw;
 }
 
 .Community > .inner .inputBox {

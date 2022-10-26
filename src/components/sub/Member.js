@@ -100,6 +100,7 @@ function Member() {
     });
     setVal({ ...Val, [name]: isChecked });
   }
+
   const handleReset = () => {
     setSubmit(false);
     setErr({});
@@ -121,7 +122,6 @@ function Member() {
       history.push('/youtube');
     }
   }, [Err]);
-
 
   return (
     <Layout name={'Member'}>

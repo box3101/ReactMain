@@ -29,3 +29,88 @@ fieldset {
 	top: -999999px;
 	opacity: 0;
 }
+@font-face {
+	font-family: "margo_scriptregular";
+	src: url("https://www.wearebrandcollective.com/fonts/margoscript-regular-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/margoscript-regular-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_nova_rgregular";
+	src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_reg-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proxima_nova_reg-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_novasemibold_italic";
+	src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold_italic-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold_italic-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_novasemibold";
+	src: url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proxima_nova_semibold-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_novablack_italic";
+	src: url("https://www.wearebrandcollective.com/fonts/proximanova-blackit-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proximanova-blackit-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_novaextrabold_italic";
+	src: url("https://www.wearebrandcollective.com/fonts/proximanova-extrabldit-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proximanova-extrabldit-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_novathin";
+	src: url("https://www.wearebrandcollective.com/fonts/proximanova-thin-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proximanova-thin-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "proxima_novathin_italic";
+	src: url("https://www.wearebrandcollective.com/fonts/proximanova-thinit-webfont.woff2")
+			format("woff2"),
+		url("https://www.wearebrandcollective.com/fonts/proximanova-thinit-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Vanitas";
+	src: url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.eot");
+	src: url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.eot?#iefix")
+			format("embedded-opentype"),
+		url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.woff")
+			format("woff"),
+		url("https://www.wearebrandcollective.com/fonts/Vanitas-Regular.ttf")
+			format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}

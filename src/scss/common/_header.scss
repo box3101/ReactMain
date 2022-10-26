@@ -1,34 +1,40 @@
 header {
 	width: 100%;
-	background: #222;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: 0;
 	.inner {
-		width: 1180px;
-		height: 80px;
-		margin: 0 auto;
 		position: relative;
+		width: 1600px;
+		height: 100px;
+		margin: 0 auto;
+		margin-top: 12px;
 
 		h1 {
 			position: absolute;
 			bottom: 10px;
 			left: 0px;
 			a {
-				font: bold 24px/1 'arial';
+				font: bold 24px/1 "arial";
 				color: #fff;
 			}
 			img {
-				height: 30px;
+				height: 48px;
 			}
 		}
 		#gnb {
 			position: absolute;
-			bottom: 0px;
+			top: 15px;
 			right: 0px;
 			li {
 				float: left;
 				a {
 					display: inline-block;
 					padding: 20px 30px;
-					font: bold 14px/1 'arial';
+					font: bold 14px/1 "arial";
 					color: #fff;
 				}
 			}
@@ -47,6 +53,9 @@ header {
 		.inner {
 			h1 a {
 				color: #222;
+				img {
+					filter: invert(1);
+				}
 			}
 			#gnb li a {
 				color: #333;
@@ -57,14 +66,15 @@ header {
 		}
 	}
 	&.main {
-		background: #000;
-		border-bottom: 1px solid #ccc;
 		.inner {
 			h1 a {
 				color: #fff;
 			}
 			#gnb li a {
 				color: #fff;
+				font-size: 13px;
+				font-weight: 100;
+				letter-spacing: 1px;
 			}
 			.fa-bars {
 				color: #fff;

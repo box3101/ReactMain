@@ -1,0 +1,36 @@
+#vids {
+	width: 100%;
+	height: 40vh;
+	background: url(../../../public/img/bg-vids.jpg) no-repeat;
+	position: relative;
+	background-attachment: fixed;
+	padding: 6vw 7vw;
+
+	.swiper {
+		height: 100%;
+		.swiper-slide {
+			width: 100%;
+			.inner {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font: bold 50px/1 "arial";
+				color: #666;
+				opacity: 0.5;
+				transform: scale(0.8);
+				transition: all 0.5s, transform 0.5s;
+			}
+			&.swiper-slide-active {
+				.inner {
+					opacity: 1;
+					transform: scale(1);
+					font-size: 20px;
+					text-align: center;
+					color: #333;
+				}
+			}
+		}
+	}
+}

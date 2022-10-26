@@ -16,7 +16,9 @@ import Member from './components/sub/Member';
 import Youtube from './components/sub/Youtube';
 
 import './scss/style.scss';
+
 function App() {
+
 	return (
 		<>
 			{/* Switch는 같은 경로의 라우터 연결시 구체적인 라우터 하나만 적용한다 */}

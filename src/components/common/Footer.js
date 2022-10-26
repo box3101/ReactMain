@@ -3,7 +3,8 @@ export default function Footer() {
     return (
         <footer>
             <div className="inner">
-                <p>2022 DCODELAB &copy; ALL RIGHT RESERVED</p>
+                <p>© CY_WEB 2018 CHANYONG Lee's Portfolio <br /> <br />
+                    box3101@naver.com</p>
             </div>
         </footer>
     )

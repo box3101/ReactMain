@@ -1,7 +1,7 @@
 function Pics() {
   return (
     <main id="pics">
-      <h1>Pics</h1>
+      <h1>Contact us .. ? 생각중</h1>
     </main>
   )
 }

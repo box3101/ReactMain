@@ -5,3 +5,72 @@
 	position: relative;
 	z-index: 1;
 }
+.visual {
+	position: relative;
+	&__img {
+		img {
+			width: 100%;
+			height: 100vh;
+			object-fit: cover;
+		}
+	}
+	&__aside {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 7vw;
+		ul {
+			li {
+				a {
+					display: inline-block;
+					margin-bottom: 12px;
+					svg {
+						font-size: 1.3rem;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	&__txt {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 66%;
+		h1 {
+			color: #fff;
+			font-size: 5rem;
+			line-height: 1.2;
+			font-weight: 400;
+			font-family: "freight-big-pro", serif !important;
+			text-align: center;
+		}
+		p {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			.bar {
+				position: relative;
+				top: 3px;
+				display: inline-block;
+				width: 300px;
+				background: #fff;
+				height: 1px;
+				margin-right: 20px;
+			}
+			position: relative;
+			top: 120px;
+			right: -100px;
+			text-align: right;
+			font-family: marco, serif;
+			line-height: 1em;
+			opacity: 0.8;
+			font-size: 3vh;
+			color: #fff;
+			font-weight: 300;
+			font-style: italic;
+		}
+	}
+}
