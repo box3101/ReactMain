@@ -40,23 +40,11 @@
   </style>
 
   <script>
-    /*
-    이미지, 영상소스를 미리 SSR방식으로 캐싱처리하는 작업 흐름
-    1. 배열에 캐싱할 이미지와 영상소스의 URL을 미리 담아놓음
-    2. 동적으로 배열에 있는 정보값으로 실제 img, video 돔을 index.html 안쪽에 강제 생성
-    3. DOM이 index.html에 생성되는 동안 마스크화면을 대신 보여줌
-    4. 모든 영상, 이미지 소스가 캐싱완료되면 마스크를 강제 제거하고 동적으로 생성한 요소도 제거 
-    5. 그 사이 리액트 컴포넌트들이 리얼돔으로 변환되서 화면에 출력
-    */
-
-    // .defaults 선언
     const defaults = document.querySelector('.defaults');
-    // .mask 선언
     const mask = document.querySelector('.mask');
-    // tags = 빈값
     let tags = '';
-    const baseURL = 'http://localhost:3000/ReactMain#/img/';
-    // imgs 배열에 url img들 추가
+    const baseURL = 'https://box3101.github.io/ReactMain/img/';
+    //const baseURL = 'http://localhost:3000/react_9class#/img/'
     const imgs = [
       baseURL + 'Community.jpg',
       baseURL + 'Department.jpg',
@@ -65,84 +53,59 @@
       baseURL + 'Youtube.jpg',
       baseURL + 'Member.jpg',
     ];
-    // vids 배열에 url vid2들 추가
     const vids = [
       baseURL + 'vid2.mp4'
     ];
 
-    // 함수실행
     createDOM();
 
-    //Promise.all()로 loadImg, loadVid 함수가 모두 프로미스를 객체를 반환할때까지 동기화
+    //Promise.all()로 loadImg, loadVid함수가 모두 프로미스를 객체를 반환할때까지 동기화
     Promise.all([loadImg(), loadVid()])
       .then(result => {
         console.log(result);
       })
 
-    // 돔 생성함수
     function createDOM() {
-      //imgs 배열을 반복을 돌려 tags 변수에 저장
       imgs.forEach(src => tags += `<img src=${src} />`);
-      //vids 배열을 반복을 돌려 tags 변수에 저장
       vids.forEach(src => tags += `<video src=${src}></video>`);
-      // .defaults에 tags 뿌려줌
       defaults.innerHTML = tags;
     }
 
-    //이미지 소스 로딩완료체크 함수
+    //이미지소스 로딩완료체크 함수
     function loadImg() {
       return new Promise((res, rej) => {
-        // 카운더이미지 0
         let countImg = 0;
-        // imgDom은 defaults에있는 img들 선택
         const imgDOM = defaults.querySelectorAll('img');
 
-        // img 배열 반복
         imgDOM.forEach(img => {
-          // img들이 온로드 될때마다
           img.onload = () => {
-            // 카운터이미지를 1씩 증가.
             countImg++;
-            console.log("img loaded", countImg);
-            // 카운터 이미지들이 모든 imgs 배열에 있는 이미지와 같을때 promise res true
+            console.log('img loaded', countImg);
             if (countImg === imgs.length) res(true);
           }
-        });
-      });
+        })
+      })
     }
 
-    // 영상소스 로딩완료체크 함수
+    //영상소스 로딩완료체크 함수
     function loadVid() {
       return new Promise((res, rej) => {
-        let countImg = 0;
-        const vidDOM = defaults.querySelectorAll('img');
+        let countVid = 0;
+        const vidDOM = defaults.querySelectorAll('video');
 
         vidDOM.forEach(vid => {
           vid.onloadeddata = () => {
             countVid++;
-            console.log("vid loaded", countVid);
+            console.log('vid loaded', countVid);
             if (countVid === vids.length) res(true);
           }
-        });
-      });
+        })
+      })
     }
 
   </script>
 
 
-  <!-- 
-    SSR vs CSR
-    - SSR (Server Side Rendering) : 페이지 이동시 일일이 HTML파일을 서버로부터 불러오는 방식
-    - CSR (Client Side Rendering) : 초기 페이지로딩시 모든 컴포넌트 (JSX) 파일을 한번에 모두 불러오는 방식
-    SSR
-    - 장점: 초기로딩속도 빠름, SEO 좋음
-    - 단점: 페이지 이동시마다 일일이 서버쪽에서 HTML파일을 요청하기 때문에 사용성이 안좋음
-    CSR
-    - 장점: 모든 컴포넌트 파일을 초기에 모두 가져오기 때문에 페이지 이동시 페이지전환 로딩이 없음
-    - 단점: 초기로딩속도가 김, SEO에 취약
-    기본적으로 리액트는 CSR방식이기 때문에 초기로딩속도와 검색엔진 최적화에 취약
-    -- 위화같은 문제점을 해결하기위해서 초기데이터 로딩시에는 SSR방식으로 이후 모든 리액트 컴포넌트가 불러와지면 CSR방식으로 바꿔치지 하는 SSR과 CSR 방식의 혼합 형태로 웹 개발
-   -->
 </body>
 
 </html>
