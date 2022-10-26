@@ -1,25 +1,47 @@
-import { useEffect } from "react";
+import { useState, forwardRef, useEffect, useImperativeHandle } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 
-//팝업 컴포넌트 생성 props으로 setOpen 변수 가져옴
-function Popup(props) {
-    useEffect(() => {
-        // 팝업이뜨면
-        document.body.style.overflow = "hidden";
-        // 사라지면
-        return () => {
-            document.body.style.overflow = "auto";
-        }
-    }, []);
+const Popup = forwardRef((props, ref) => {
+
+	const [Open, setOpen] = useState(false);
+	useImperativeHandle(ref, () => {
+		return {
+			open: () => setOpen(true),
+		};
+
+	});
+
+	useEffect(() => {
+		Open ? (document.body.style.overflow = "hidden")
+			: (document.body.style.overflow = "auto");
+	}, [Open]);
 
 
-    return (
-        // aside pop 호출
-        <aside className="pop">
-            {/* iframe 값 가져옴 */}
-            <div className="con">{props.children}</div>
-            {/* 닫기 누르면 open값을 falsefh */}
-            <span className="close" onClick={() => { props.setOpen(false) }}>close</span>
-        </aside>
-    );
-}
+	return (
+
+		<AnimatePresence>
+			{Open && (
+				<motion.aside className="pop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} >
+					<div className="con">{props.children}</div>
+					<span className="close" onClick={() => setOpen(false)}>close</span>
+				</motion.aside>
+			)}
+		</AnimatePresence>
+
+
+	);
+});
 export default Popup;
+
+
+/*
+forwardRef 
+단계1 - 기존의 컴포넌트 함수를 popup이라는 컴포넌트 함수를 대입형(선언형을 대입형으로 전환해줘야한다)
+단계2 - 해당 화살표함수를 forwordRef로 감쌈, 인수로 전달한다
+단계 3 - 화살표함수(forwardRef로 전달되는) 두번째 인수로 ref추가
+단계 4 - forwardRef안쪽에 useImperativeHandle 함수를 호출한다
+단계 5 - 해당함수를 객체를 반환해서 해당 객체값을 부모 컴포넌트로 전달
+단계 6 - 부모컴포넌트에 useRef로 forwardRef로 전달되는 자식 컴포넌트를 참조한다
+단계 7 - 참조 객체는 useImperativeHandle이 리턴하는 객체를 지칭한다
+
+*/
