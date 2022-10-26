@@ -2,6 +2,10 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Menu from "./Menu";
+
+
+
 export default function Header(props) {
     const active = { color: 'orange' };
 
@@ -53,6 +57,8 @@ export default function Header(props) {
                     </li>
                 </ul>
                 <FontAwesomeIcon icon={faBars} />
+
+                <Menu></Menu>
             </div>
         </header>
     )
