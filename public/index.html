@@ -83,7 +83,7 @@
         const [loadImg, loadedVid] = result;
 
         //두 promise객체의 반환값이 모두 true이면 (영상 이미지가 모두 캐싱완료되면)
-        if (loadingImg && loadedVid) {
+        if (loadImg && loadedVid) {
           console.log("mask-hide");
           mask.classList.add("off");
         }
