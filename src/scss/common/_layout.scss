@@ -1,13 +1,13 @@
 .content {
 	figure {
-		margin-top: 10% !important;
+		margin-top: 6% !important;
 		margin-bottom: 2% !important;
 		padding-top: 3% !important;
 	}
 	> .inner {
-		width: 1800px;
+		width: 1180px;
 		min-height: 400px;
-		margin: 100px auto 150px;
+		margin: 30px auto 150px;
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);
@@ -15,14 +15,11 @@
 		transition: 0.5s;
 		h1 {
 			text-align: center;
-			/* font: normal 60px/1 "work sans"; */
-			color: #111;
-			margin-bottom: 70px;
-			font-family: "freight-big-pro", serif !important;
-			font-size: 95px;
-			font-weight: 400;
-			text-transform: uppercase;
-			margin-top: -64px;
+			color: #263246;
+			font-family: "Montserrat", Sans-serif;
+			font-size: 44px;
+			font-weight: 600;
+			margin-bottom: 15px;
 			&::after {
 				content: "";
 				display: block;

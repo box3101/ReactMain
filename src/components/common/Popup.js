@@ -23,7 +23,7 @@ const Popup = forwardRef((props, ref) => {
 			{Open && (
 				<motion.aside className="pop"
 					initial={{ opacity: 0, scale: 0 }}
-					animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+					animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
 					exit={{ opacity: 0, scale: 0, transition: { duration: 0.5, delay: 0.5 } }}>
 					<motion.div
 						className="con"
@@ -33,7 +33,7 @@ const Popup = forwardRef((props, ref) => {
 					>{props.children}</motion.div>
 					<motion.span
 						initial={{ x: 50, opacity: 0 }}
-						animate={{ x: 0, opacity: 1, transition: { delay: 1.5 } }}
+						animate={{ x: 0, opacity: 1, transition: { delay: 1 } }}
 						className="close"
 						onClick={() => setOpen(false)}>close</motion.span>
 				</motion.aside>

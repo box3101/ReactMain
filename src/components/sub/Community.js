@@ -21,11 +21,11 @@ export default function Community() {
 
   const getLocalData = () => {
     const dummyPosts = [
-      { title: 'HELLO5', content: 'Here comes desription in details' },
-      { title: 'HELLO4', content: 'Here comes desription in details' },
-      { title: 'HELLO3', content: 'Here comes desription in details' }, // enableUpdate : true
-      { title: 'HELLO2', content: 'Here comes desription in details' },
-      { title: 'HELLO1', content: 'Here comes desription in details' },
+      { title: '아이유너무 이뻐요', content: '아이유 너무 이뻐요' },
+      { title: '텍스트를 적어보아요', content: '텍스트를 적어보아요텍스트를 적어보아요텍스트를 적어보아요텍스트를 적어보아요' },
+      // { title: 'HELLO3', content: 'Here comes desription in details' }, // enableUpdate : true
+      // { title: 'HELLO2', content: 'Here comes desription in details' },
+      // { title: 'HELLO1', content: 'Here comes desription in details' },
     ];
 
     const data = localStorage.getItem('post');
