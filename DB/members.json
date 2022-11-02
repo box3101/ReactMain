@@ -1,34 +1,19 @@
 {
     "members": [
         {
-            "name": "Julia",
-            "positon": "President",
+            "name": "RIAN",
+            "krName": "최리안",
             "pic": "member1.jpg"
         },
         {
-            "name": "David",
-            "positon": "Vice President",
+            "name": "GABEE",
+            "krName": "신가비",
             "pic": "member2.jpg"
         },
         {
-            "name": "Emily",
-            "positon": "UI Designer",
+            "name": "SIMEEZ",
+            "krName": "심희정",
             "pic": "member3.jpg"
-        },
-        {
-            "name": "Paul",
-            "positon": "Front-end Engineer",
-            "pic": "member4.jpg"
-        },
-        {
-            "name": "sara",
-            "positon": "Back-end Engineer",
-            "pic": "member5.jpg"
-        },
-        {
-            "name": "Michael",
-            "positon": "Project Manager",
-            "pic": "member6.jpg"
         }
     ]
 }
