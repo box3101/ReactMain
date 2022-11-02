@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getFlickr = async (opt) => {
-  const key = '4612601b324a2fe5a1f5f7402bf8d87a';
+  const key = '54d0497f86a4dd7aae4fcd244c8a7ce4';
   const method_interest = "flickr.interestingness.getList";
   const method_search = "flickr.photos.search";
   const method_user = "flickr.people.getPhotos";
@@ -32,6 +32,11 @@ export const getYoutube = async () => {
 
 export const getMembers = async () => {
   const url = process.env.PUBLIC_URL + '/DB/members.json';
+  return await axios.get(url);
+}
+
+export const getGEOBUG = async () => {
+  const url = process.env.PUBLIC_URL + '/DB/geobug.json';
   return await axios.get(url);
 }
 

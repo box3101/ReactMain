@@ -26,5 +26,32 @@
 				font-weight: 600;
 			}
 		}
+		.mem1,
+		.mem2 {
+			p {
+				margin-top: 50px;
+				text-align: center;
+				color: #263246;
+				font-family: "Raleway", Sans-serif;
+				font-size: 22px;
+				font-weight: 600;
+			}
+			section {
+				margin-top: 20px;
+				display: flex;
+				gap: 66px;
+				h3 {
+					margin-top: 10px;
+					text-align: center;
+				}
+				p {
+					text-align: center;
+					margin-top: 10px;
+					color: #443f3f;
+					font-family: "Montserrat", Sans-serif;
+					font-size: 15px;
+				}
+			}
+		}
 	}
 }

@@ -1,5 +1,5 @@
 import { takeLatest, all, put, fork, call } from 'redux-saga/effects';
-import { getFlickr, getYoutube, getMembers } from './api';
+import { getFlickr, getYoutube, getMembers, getGEOBUG } from './api';
 import * as types from './actionType';
 
 //flickr 비동기 처리 함수
@@ -30,7 +30,6 @@ function* callYoutube() {
   yield takeLatest(types.YOUTUBE.start, returnYoutube);
 }
 
-
 //members 비동기 처리 함수
 function* returnMembers() {
   try {
@@ -45,6 +44,20 @@ function* callMembers() {
   yield takeLatest(types.MEMBERS.start, returnMembers);
 }
 
+//returnGeobug 비동기 처리 함수
+function* returnGeobug() {
+  try {
+    const response = yield call(getGEOBUG);
+    yield put({ type: types.GEOBUG.success, payload: response.data.geobug });
+  } catch (err) {
+    yield put({ type: types.GEOBUG.fail, payload: err });
+  }
+
+}
+function* callGEOBUG() {
+  yield takeLatest(types.GEOBUG.start, returnGeobug);
+}
+
 export default function* rootSaga() {
-  yield all([fork(callFlickr), fork(callYoutube), fork(callMembers)]);
+  yield all([fork(callFlickr), fork(callYoutube), fork(callMembers), fork(callGEOBUG)]);
 }

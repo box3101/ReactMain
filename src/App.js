@@ -26,8 +26,9 @@ function App() {
 
 	useEffect(() => {
 		dispatch({ type: types.MEMBERS.start });
+		dispatch({ type: types.GEOBUG.start });
 		dispatch({ type: types.YOUTUBE.start })
-		dispatch({ type: types.FLICKR.start, Opt: { type: 'user', user: '164021883@N04' } })
+		dispatch({ type: types.FLICKR.start, Opt: { type: 'user', user: '196645763@N03' } })
 	}, []);
 
 	return (

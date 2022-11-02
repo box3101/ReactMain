@@ -3,6 +3,11 @@ export const MEMBERS = {
   success: 'MEMBERS_SUCCESS',
   fail: 'MEMBERS_FAIL'
 }
+export const GEOBUG = {
+  start: 'GEOBUG_START',
+  success: 'GEOBUG_SUCCESS',
+  fail: 'GEOBUG_FAIL'
+}
 export const YOUTUBE = {
   start: 'YOUTUBE_START',
   success: 'YOUTUBE_SUCCESS',

@@ -1,0 +1,19 @@
+{
+    "geobug": [
+        {
+            "name": "JAYB",
+            "krName": "송재엽",
+            "pic": "member4.jpg"
+        },
+        {
+            "name": "동주쓰",
+            "krName": "박동주",
+            "pic": "member5.jpg"
+        },
+        {
+            "name": "WOOD",
+            "krName": "문성훈",
+            "pic": "member6.jpg"
+        }
+    ]
+}

@@ -18,6 +18,22 @@ const memberReducer = (state = { members: [] }, action) => {
 	}
 }
 
+const geobugReducer = (state = { geobug: [] }, action) => {
+	switch (action.type) {
+		case types.GEOBUG.start:
+			return state;
+
+		case types.GEOBUG.success:
+			return { ...state, geobug: action.payload }
+
+		case types.GEOBUG.fail:
+			return { ...state, geobug: action.payload }
+
+		default:
+			return state;
+	}
+}
+
 const youtubeReducer = (state = { youtube: [] }, action) => {
 	switch (action.type) {
 		case types.YOUTUBE.start:
@@ -51,6 +67,6 @@ const flickrReducer = (state = { flickr: [] }, action) => {
 }
 
 
-const reducers = combineReducers({ memberReducer, youtubeReducer, flickrReducer });
+const reducers = combineReducers({ memberReducer, geobugReducer, youtubeReducer, flickrReducer });
 
 export default reducers;
