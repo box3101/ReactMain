@@ -1,4 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setYoutube, setMembers } from './redux/actionType';
+import axios from 'axios';
 
 //common
 import Header from './components/common/Header';
@@ -14,21 +18,24 @@ import Gallery from './components/sub/Gallery';
 import Location from './components/sub/Location';
 import Member from './components/sub/Member';
 import Youtube from './components/sub/Youtube';
+import * as types from './redux/actionType';
 
 import './scss/style.scss';
-
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch({ type: types.MEMBERS.start });
+		dispatch({ type: types.YOUTUBE.start })
+		dispatch({ type: types.FLICKR.start, Opt: { type: 'user', user: '164021883@N04' } })
+	}, []);
 
 	return (
 		<>
 			{/* Switch는 같은 경로의 라우터 연결시 구체적인 라우터 하나만 적용한다 */}
 			<Switch>
 				<Route exact path='/' component={Main} />
-				<Route path='/'>
-					{/* 서브페이지 모두에 적용하는 header로 '/'이후에 어떤 주소가 있으면 서브페이지의 헤더로 인식하여 이곳의 헤더를 읽어준다  */}
-					<Header type={'sub'} />
-					{/* 프롭으로 type={'sub'} 으로 'sub' 프롭이 있는 스타일을 적용스켜 메인헤더를 스타일링 하게 한다 */}
-				</Route>
+				<Route path='/' render={() => <Header type={'sub'} />} />
 			</Switch>
 
 
@@ -38,7 +45,6 @@ function App() {
 			<Route path='/location' component={Location} />
 			<Route path='/member' component={Member} />
 			<Route path='/youtube' component={Youtube} />
-
 
 			<Footer />
 		</>

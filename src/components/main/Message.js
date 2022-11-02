@@ -1,13 +1,15 @@
+import Layout from "../common/Layout";
+
 function Message() {
   return (
     <main id="Message" className="message">
-      <h1>Member</h1>
-
-      <h2>
-
-        가족 소개 이미지,, 텍스트 추가 예정
-
-      </h2>
+      <div className="inner">
+        <div className="tit-wrap">
+          <h1>ARTIST</h1>
+          <h2>Dancers</h2>
+          <p>LACHICA</p>
+        </div>
+      </div>
     </main>
   )
 }

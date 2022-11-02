@@ -8,10 +8,9 @@ header {
 	top: 0;
 	.inner {
 		position: relative;
-		width: 1450px;
+		width: 1170px;
 		height: 100px;
 		margin: 0 auto;
-		margin-top: 12px;
 
 		h1 {
 			position: absolute;
@@ -22,21 +21,37 @@ header {
 				color: #fff;
 			}
 			img {
-				height: 48px;
+				position: relative;
 			}
 		}
 		#gnb {
 			position: absolute;
-			top: 15px;
+			top: 50%;
+			transform: translateY(-50%);
 			right: 0px;
 			li {
 				float: left;
+				margin-right: 35px;
+				&:last-of-type {
+					margin-right: 0;
+				}
 				a {
-					display: inline-block;
-					padding: 20px 30px;
-					font: bold 14px/1 "arial";
-					color: #fff;
-					font-family: "proxima_nova_rgregular";
+					display: block;
+					text-transform: uppercase;
+					position: relative;
+					&:hover {
+						&::after {
+							content: "";
+							display: inline-block;
+							position: absolute;
+							left: 0;
+							width: 100%;
+							top: 30px;
+							background: #000;
+							height: 2px;
+							background: #d83a3a;
+						}
+					}
 				}
 			}
 		}
@@ -48,32 +63,48 @@ header {
 			display: none;
 		}
 	}
-	&.sub {
+	&.main {
+		background-color: #191919;
+		height: 100px;
+		padding: 10px;
+		transition: 0.5s height, 0.5s padding;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		.inner {
 			h1 a {
-				color: #222;
-				img {
-					filter: invert(1);
-				}
+				color: #fff;
 			}
 			#gnb li a {
-				color: #333;
+				display: block;
+				font-size: 15px;
+				font-weight: 500;
+				color: #fff !important;
+				font-family: "Montserrat", sans-serif;
 			}
 			.fa-bars {
-				color: #333;
+				color: #fff;
 			}
 		}
 	}
-	&.main {
+	&.sub {
+		background-color: #191919;
+		height: 100px;
+		padding: 10px;
+		transition: 0.5s height, 0.5s padding;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		.inner {
 			h1 a {
 				color: #fff;
 			}
 			#gnb li a {
-				color: #fff;
-				font-size: 13px;
-				font-weight: 100;
-				letter-spacing: 1px;
+				display: block;
+				font-size: 15px;
+				font-weight: 500;
+				color: #fff !important;
+				font-family: "Montserrat" !important;
 			}
 			.fa-bars {
 				color: #fff;

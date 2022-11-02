@@ -1,24 +1,13 @@
 import Layout from "../common/Layout";
-import axios from "axios";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Popup from "../common/Popup";
+import { useSelector } from 'react-redux';
+
 
 export default function Youtube() {
+    const Vids = useSelector(store => store.youtubeReducer.youtube);
     const pop = useRef(null);
-    const [Vids, setVids] = useState([]);
     const [Index, setIndex] = useState(0);
-
-    useEffect(() => {
-        const key = 'AIzaSyAKqZ1Dx9awi1lCS84qziASeQYZJqLxLSM';
-        const playlist = "PLtt429gshWMp4G-VhNTFhBzBTd7GOEz-G";
-        const num = 6;
-        const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
-
-        axios.get(url).then((json) => {
-            //console.log(json.data);
-            setVids(json.data.items);
-        })
-    }, []);
 
     return (
         <>
@@ -48,13 +37,14 @@ export default function Youtube() {
                         </article>
                     );
                 })}
-
             </Layout>
+
             <Popup ref={pop}>
                 {Vids.length !== 0 && (
                     <iframe src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`} frameBorder='0'></iframe>
                 )}
             </Popup>
+
         </>
 
     );

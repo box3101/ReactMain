@@ -25,12 +25,11 @@ function Menu() {
             Community
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to='/gallery' activeStyle={active}>
             Gallery
           </NavLink>
-
-        </li>
+        </li> */}
         <li>
           <NavLink to='/youtube' activeStyle={active}>
             Youtube
