@@ -1,8 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setYoutube, setMembers } from './redux/actionType';
-import axios from 'axios';
 
 //common
 import Header from './components/common/Header';
