@@ -150,53 +150,137 @@ export default function Community() {
 
   return (
     <Layout name={"Community"} >
-
-      <div className="inputBox">
-        <input type="text" placeholder="제목을 입력하세요" ref={input} />
-        <span className="err"></span>
-        <br />
-        <textarea cols="30" rows="5" placeholder="본문을 입력하세요." ref={textarea}>
-        </textarea>
-        <br />
-        <div className="btnSet">
-          <button onClick={resetForm}>CANCEL</button>
-          <button onClick={createPost}>WRITE</button>
-        </div>
+      <div class="boxes">
+        {/* <details id="bts">
+          <summary>BTS<span class="realname">(Bangtan Boys)</span></summary>
+          <ul class="info">
+            <li>7-member boyband from South Korea, active since 2013</li>
+            <li><a href="https://www.youtube.com/watch?v=GEIU_7v40Dw" target="_blank" rel="noopener noreferrer">Really</a> <a href="https://www.youtube.com/watch?v=sWuYspuN6U8" target="_blank" rel="noopener noreferrer">good</a> <a href="https://www.youtube.com/watch?v=_AlODdAInRY" target="_blank" rel="noopener noreferrer">at</a> <a href="https://www.youtube.com/watch?v=vJwHIpEogEY" target="_blank" rel="noopener noreferrer">dancing</a></li>
+            <li>Has a <a href="https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX" target="_blank" rel="noopener noreferrer">great discography</a> with <a href="https://genius.com/artists/Bts" target="_blank" rel="noopener noreferrer">~deep~ lyrics</a></li>
+            <li>Won Top Social Artist at Billboard Music Awards 2017 &amp; 2018</li>
+            <li>Has a literal army of fans called ARMY, who will flood your social media if you mention BTS, 0/10 do not recommend</li>
+          </ul>
+        </details>
+        <details id="rm">
+          <summary>RM<span class="realname">(Kim Namjoon)</span></summary>
+          <ul>
+            <li>Born in 1994, rapper of the group</li>
+            <li>The only one in the group who speaks decent English</li>
+            <li>Is supposedly very smart</li>
+            <li>But also very clumsy and forgetful, prone to losing his passport, among other things</li>
+            <li>Tend to sound fake deep but actually just very sweet and nice</li>
+          </ul>
+        </details> */}
+        <details id="jin">
+          <summary>JIN<span class="realname">(Kim Seokjin)</span></summary>
+          <ul>
+            <li>Born in 1992, vocalist + resident good looking guy of the group</li>
+            <li>The only one in the group who goes to actual college, majored in acting</li>
+            <li>Is very (VERY!!!) proud of his face</li>
+            <li><a href="https://twitter.com/Shazam/status/998371896813993984/photo/1" target="_blank" rel="noopener noreferrer">Randomly blows kisses</a> to the camera and is very funny in general</li>
+            <li>Constantly makes Korean dad jokes</li>
+          </ul>
+        </details>
+        <details id="suga">
+          <summary>SUGA<span class="realname">(Min Yoongi)</span></summary>
+          <ul>
+            <li>Born in 1993, rapper of the group</li>
+            <li>Is very!!! passionate about music it's so endearing</li>
+            <li>Has an amazing mixtape titled <a href="https://open.spotify.com/album/2nz4nG3HiOUkceO1NYvJnP" target="_blank" rel="noopener noreferrer">Agust D</a></li>
+            <li>Looks like he'd rather die than be here 99% of the time</li>
+            <li>Makes the <a href="https://giphy.com/gifs/yoongi-xYkOXpNXnjRsI" target="_blank" rel="noopener noreferrer">best</a> <a href="https://giphy.com/gifs/bangtan-boys-sonyeondan-22pSte4vdGvok" target="_blank" rel="noopener noreferrer">meme</a> <a href="https://giphy.com/gifs/kpop-gif-jungkook-3LJ7AQcTvYP8k" target="_blank" rel="noopener noreferrer">faces</a></li>
+          </ul>
+        </details>
+        <details id="jhope">
+          <summary>j-hope<span class="realname">(Jung Hoseok)</span></summary>
+          <ul>
+            <li>Born in 1994, rapper + dancer of the group</li>
+            <li>Also the moodmaker of the group</li>
+            <li>Probably the <a href="https://www.youtube.com/watch?v=dj42sqcbnCg" target="_blank" rel="noopener noreferrer">best dancer</a> you'd ever see in your lifetime</li>
+            <li>Generally super happy and hyper and loud it's embarassing</li>
+            <li>Scared of anything and everything</li>
+          </ul>
+        </details>
+        <details id="jimin">
+          <summary>Jimin<span class="realname">(Park Jimin)</span></summary>
+          <ul>
+            <li>Born in 1995, vocalist + dancer of the group</li>
+            <li>Was a dance student, supposedly so good that his teachers urged him not to be in a boyband</li>
+            <li>Really hardworking and tends to be hard on himself</li>
+            <li>Tweets a lot</li>
+            <li>Supposedly used to be top of the class, best student, etc</li>
+          </ul>
+        </details>
+        <details id="v">
+          <summary>V<span class="realname">(Kim Taehyung)</span></summary>
+          <ul>
+            <li>Born in 1995, vocalist + resident look-good-in-anything guy of the group</li>
+            <li>Likes and sings jazzy and easy listening music</li>
+            <li>Prone to wearing questionable fashion, but THAT FACE saves it</li>
+            <li>Is a very sweet and soft kid but also gets annoyed easily</li>
+            <li>Has a Leica and I am very jealous</li>
+          </ul>
+        </details>
+        <details id="jungkook">
+          <summary>Jungkook<span class="realname">(Jeon Jungkook)</span></summary>
+          <ul>
+            <li>Born in 1997, vocalist + dancer + baby of the group</li>
+            <li>Is good at anything except studying</li>
+            <li>Supposedly <a href="https://www.reddit.com/r/Overwatch/comments/7tymfj/massive_kpop_group_bts_12m_twitter_followers_just/" target="_blank" rel="noopener noreferrer">plays Overwatch like a pro</a></li>
+            <li>Great at <a href="https://www.youtube.com/watch?v=PMEkmiQP5bg" target="_blank" rel="noopener noreferrer">editing videos</a> and <a href="https://www.youtube.com/watch?v=VLzRQCIZrmE" target="_blank" rel="noopener noreferrer">covering songs</a></li>
+            <li>Joined the group when he was 16, considers himself raised by the group</li>
+          </ul>
+        </details>
       </div>
 
-      <div className="showBox">
-        {Posts.map((post, idx) => {
-          return (
-            <article key={idx}>
-              {
-                post.enableUpdate ? (
-                  <>
-                    <div className="ediTxt">
-                      <input type="text" defaultValue={post.title} ref={inputEdit} />
-                      <br />
-                      <textarea cols="30" rows="4" defaultValue={post.content} ref={textareaEdit}>
 
-                      </textarea>
-                    </div>
-                    <div className="btnSet">
-                      <button onClick={() => disableUpdate(idx)}>CanCel</button>
-                      <button onClick={() => updatePost(idx)}>Update</button>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="txt">
-                      <h2>{post.title}</h2>
-                      <p>{post.content}</p>
-                    </div>
-                    <div className="btnSet">
-                      <button onClick={() => enableUpdate(idx)}>EDIT</button>
-                      <button onClick={() => deletePost(idx)}>DELEETE</button>
-                    </div>
-                  </>
-                )
-              }
-              {/* <div className="txt">
+      <div className="wrap">
+        <div className="inputBox">
+          <input type="text" placeholder="제목을 입력하세요" ref={input} />
+          <span className="err"></span>
+          <br />
+          <textarea cols="30" rows="5" placeholder="본문을 입력하세요." ref={textarea}>
+          </textarea>
+          <br />
+          <div className="btnSet">
+            <button onClick={createPost}>WRITE</button>
+            <button onClick={resetForm}>CANCEL</button>
+          </div>
+        </div>
+
+        <div className="showBox">
+          {Posts.map((post, idx) => {
+            return (
+              <article key={idx}>
+                {
+                  post.enableUpdate ? (
+                    <>
+                      <div className="ediTxt">
+                        <input type="text" defaultValue={post.title} ref={inputEdit} />
+                        <br />
+                        <textarea cols="30" rows="4" defaultValue={post.content} ref={textareaEdit}>
+
+                        </textarea>
+                      </div>
+                      <div className="btnSet">
+                        <button onClick={() => disableUpdate(idx)}>CanCel</button>
+                        <button onClick={() => updatePost(idx)}>Update</button>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="txt">
+                        <h2>{post.title}</h2>
+                        <p>{post.content}</p>
+                      </div>
+                      <div className="btnSet">
+                        <button onClick={() => enableUpdate(idx)}>EDIT</button>
+                        <button onClick={() => deletePost(idx)}>DELEETE</button>
+                      </div>
+                    </>
+                  )
+                }
+                {/* <div className="txt">
                 <h2>{post.title}</h2>
                 <p>{post.content}</p>
               </div>
@@ -204,9 +288,10 @@ export default function Community() {
                 <button onClick={() => enableUpdate(idx)}>EDIT</button>
                 <button onClick={() => deletePost(idx)}>DELELTE</button>
               </div> */}
-            </article>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
       </div>
     </Layout>
   );

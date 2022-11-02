@@ -13,30 +13,32 @@ export default function Youtube() {
         <>
             <Layout name={"Youtube"}>
 
-                {Vids.map((data, index) => {
+                <div className="section-wrap">
+                    {Vids.map((data, index) => {
 
-                    const tit = data.snippet.title;
-                    const desc = data.snippet.description;
-                    const date = data.snippet.publishedAt;
+                        const tit = data.snippet.title;
+                        const desc = data.snippet.description;
+                        const date = data.snippet.publishedAt;
 
-                    return (
-                        <article key={index}>
-                            <h3>{tit.length > 30 ? tit.substr(0, 30) + '...' : tit}</h3>
-                            <div className="txt">
-                                <p>{desc.length > 100 ? desc.substr(0, 100) : desc}</p>
-                                <span>{date.split('T')[0]}</span>
-                            </div>
-                            <div className="pic" onClick={() => {
-                                pop.current.open();
-                                setIndex(index)
-                            }}>
-                                <img
-                                    src={data.snippet.thumbnails.standard.url}
-                                    alt={data.snippet.title} />
-                            </div>
-                        </article>
-                    );
-                })}
+                        return (
+                            <article key={index}>
+                                <div className="pic" onClick={() => {
+                                    pop.current.open();
+                                    setIndex(index)
+                                }}>
+                                    <img
+                                        src={data.snippet.thumbnails.standard.url}
+                                        alt={data.snippet.title} />
+                                </div>
+                                <h3>{tit.length > 30 ? tit.substr(0, 30) + '...' : tit}</h3>
+                                <div className="txt">
+                                    <p>{desc.length > 100 ? desc.substr(0, 100) : desc}</p>
+                                    <span>{date.split('T')[0]}</span>
+                                </div>
+                            </article>
+                        );
+                    })}
+                </div>
             </Layout>
 
             <Popup ref={pop}>

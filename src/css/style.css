@@ -436,7 +436,7 @@ header.sub .inner .fa-bars {
   object-fit: cover;
 }
 #pics .swiper .swiper-slide .inner h2 {
-  font: normal 30px/1.5 "work sans";
+  font: normal 21px/1.5 "work sans";
   font-family: "Montserrat", Sans-serif;
   color: #333;
   height: 90px;
@@ -560,19 +560,28 @@ header.sub .inner .fa-bars {
   padding: 6vw 7vw;
 }
 
+.Community > .inner .wrap {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
 .Community > .inner .inputBox {
   width: 100%;
-  border: 1px solid #bbb;
-  padding: 50px;
+  padding: 50px 0;
   margin-bottom: 50px;
 }
 .Community > .inner .inputBox input[type=text],
 .Community > .inner .inputBox textarea {
-  width: 50%;
-  padding: 8px 10px;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 5px;
   border: 1px solid #aaa;
   margin-bottom: 20px;
   resize: none;
+  font-size: 15px;
+}
+.Community > .inner .inputBox .btnSet {
+  text-align: center;
 }
 .Community > .inner .inputBox .btnSet button {
   width: 150px;
@@ -584,19 +593,30 @@ header.sub .inner .fa-bars {
   cursor: pointer;
   margin-right: 20px;
 }
+.Community > .inner .inputBox .btnSet button:nth-of-type(2) {
+  background: #d83a3a;
+}
 .Community > .inner .showBox {
   width: 100%;
-  border: 1px solid #bbb;
-  padding: 50px;
+  padding: 50px 0;
 }
 .Community > .inner .showBox article {
   background: #fff;
+  border-radius: 5px;
+  border: 1px solid #aaa;
   padding: 30px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.Community > .inner .showBox article h2 {
+  margin-bottom: 10px;
+}
+.Community > .inner .showBox article p {
+  margin-bottom: 10px;
 }
 .Community > .inner .showBox article .editTxt {
   width: 60%;
@@ -625,6 +645,147 @@ header.sub .inner .fa-bars {
 }
 .Community > .inner .showBox article .btnSet button:nth-of-type(2) {
   color: orangered;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+  transition: all 0.5s;
+}
+
+.boxes details {
+  width: calc(33.3% - 20px);
+  height: 210px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+  transition: background-size 0s;
+  transition: filter 1s;
+}
+.boxes details:hover, .boxes details:focus {
+  cursor: pointer;
+  filter: grayscale(70%);
+}
+.boxes details[open] {
+  background-position: top left;
+  filter: grayscale(0%);
+  grid-row: span 2;
+}
+.boxes details[open] summary {
+  font-size: 1.5em;
+  transform: rotate(0deg);
+  top: var(--name-top);
+}
+.boxes details[open] summary .realname {
+  opacity: 1;
+  max-height: 50px;
+  max-width: 200px;
+}
+.boxes details[open] summary ~ * {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.boxes details summary {
+  background: black;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  top: 0;
+  left: 0;
+  transform: rotate(-15deg);
+  transition: all 0.5s;
+  z-index: 100;
+  position: relative;
+  left: -17.5px;
+}
+.boxes details summary .realname {
+  display: block;
+  font-size: 14px;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  max-width: 0;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+.boxes details summary::-webkit-details-marker {
+  display: none;
+}
+.boxes details summary:first-of-type {
+  list-style-type: none;
+}
+.boxes details summary:hover {
+  cursor: pointer;
+}
+.boxes details summary:focus {
+  border: 3px solid #1adbb1;
+  outline: none;
+}
+.boxes details ul {
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  border-top: 0;
+  padding: 10px;
+  list-style: none;
+  transition: all 0.5s;
+}
+.boxes details ul li {
+  padding: 10px 5px;
+}
+.boxes details ul li:nth-child(2) {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.boxes details ul li:nth-child(3) {
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+.boxes details ul li:nth-child(4) {
+  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+}
+.boxes details ul li:nth-child(5) {
+  animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+}
+
+#bts {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/profile-kv.png");
+}
+
+#v {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-v.jpg");
+}
+
+#suga {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-suga.jpg");
+}
+
+#jhope {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-jhope.jpg");
+}
+
+#jungkook {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-jk.jpg");
+}
+
+#jin {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-jin.jpg");
+}
+
+#jimin {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-jimin.jpg");
+}
+
+#rm {
+  background-image: url("https://bts.ibighit.com/images/bts/profile/member-rm.jpg");
 }
 
 @media screen and (max-width: 1179px) {
@@ -979,37 +1140,50 @@ header.sub .inner .fa-bars {
     width: 100%;
   }
 }
-.Youtube article {
-  border-top: 1px solid #aaa;
-  padding: 20px 0px;
+.Youtube .section-wrap {
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+}
+.Youtube article {
+  width: calc(25% - 30px);
+  border-top: 1px solid #aaa;
+  padding: 20px 0px;
   justify-content: space-between;
 }
+.Youtube article img {
+  width: 100%;
+}
 .Youtube article h3 {
-  width: 44%;
+  width: 100%;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   font-family: "work sans";
-  color: #777;
+  color: #000;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  min-height: 50px;
 }
 .Youtube article .txt {
-  width: 38%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
 .Youtube article .txt p {
-  font: 14px/1.2 "arial";
-  color: #999;
+  font: 13px/1.3 "arial";
+  color: #666;
   filter: saturate(0);
+  margin-bottom: 18px;
+  max-height: 30px;
+  overflow: hidden;
 }
 .Youtube article .txt span {
-  font: 12px/1 "arial";
-  color: orange;
+  font: 13px/1 "arial";
+  color: #d83a3a;
 }
 .Youtube article .pic {
-  width: 40%;
+  width: 100%;
   height: 200px;
   background: #000;
   transition: 0.5s;
