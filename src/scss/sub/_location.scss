@@ -14,14 +14,16 @@
 		button {
 			cursor: pointer;
 			height: 30px;
-			border: 1px solid #888;
+			border: 1px solid #fff;
+			background: #fff;
 			padding: 5px 20px;
 		}
 
 		ul {
 			display: flex;
 			li {
-				border: 1px solid #888;
+				border: 1px solid #fff;
+				background: #fff;
 				height: 30px;
 				padding: 0px 20px;
 				line-height: 30px;
@@ -30,8 +32,8 @@
 				margin-left: 10px;
 				transition: 0.5s;
 				&.on {
-					background: #333;
-					border: 1px solid #333;
+					background: orange;
+					border: 1px solid orange;
 					color: #fff;
 				}
 			}

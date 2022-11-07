@@ -2,46 +2,260 @@
 	> .inner {
 		.wrap {
 			margin-top: 50px;
-			display: flex;
+			// display: flex;
 			gap: 30px;
 		}
 		.inputBox {
 			width: 100%;
 			padding: 50px 0;
 			margin-bottom: 50px;
+			h2 {
+				color: #fff;
+				margin-bottom: 20px;
+				font-size: 25px;
+				font-weight: 500;
+			}
 
 			input[type="text"],
 			textarea {
 				width: 100%;
 				padding: 20px 10px;
 				border-radius: 5px;
+				background: #222;
 				border: 1px solid #aaa;
 				margin-bottom: 20px;
 				resize: none;
 				font-size: 15px;
+				font-family: arial;
+				color: #fff;
+				::placeholder {
+					color: #fff;
+				}
 			}
+
 			.btnSet {
 				text-align: center;
+				display: flex;
+				justify-content: center;
+				gap: 15px;
 				button {
-					width: 150px;
-					height: 30px;
-					display: inline-block;
-					border: none;
-					background: #555;
-					color: #fff;
 					cursor: pointer;
-					margin-right: 20px;
+					position: relative;
+					padding: 10px 20px;
+					color: orange;
+					background: transparent;
+					border: none;
+					font-size: 16px;
+					text-decoration: none;
+					text-transform: uppercase;
+					overflow: hidden;
+					transition: 0.5s;
+					margin-top: 40px;
+					letter-spacing: 4px;
+					font-weight: bold !important;
+					&:hover {
+						background: orange;
+						color: #fff;
+						border-radius: 5px;
+						box-shadow: 0 0 5px orange, 0 0 25px orange, 0 0 50px orange,
+							0 0 100px orange;
+					}
+					span {
+						position: absolute;
+						display: block;
+					}
+
+					span:nth-child(1) {
+						top: 0;
+						left: -100%;
+						width: 100%;
+						height: 2px;
+						background: linear-gradient(90deg, transparent, orange);
+						animation: btn-anim1 1s linear infinite;
+					}
+
+					@keyframes btn-anim1 {
+						0% {
+							left: -100%;
+						}
+						50%,
+						100% {
+							left: 100%;
+						}
+					}
+
+					span:nth-child(2) {
+						top: -100%;
+						right: 0;
+						width: 2px;
+						height: 100%;
+						background: linear-gradient(180deg, transparent, orange);
+						animation: btn-anim2 1s linear infinite;
+						animation-delay: 0.25s;
+					}
+
+					@keyframes btn-anim2 {
+						0% {
+							top: -100%;
+						}
+						50%,
+						100% {
+							top: 100%;
+						}
+					}
+
+					span:nth-child(3) {
+						bottom: 0;
+						right: -100%;
+						width: 100%;
+						height: 2px;
+						background: linear-gradient(270deg, transparent, orange);
+						animation: btn-anim3 1s linear infinite;
+						animation-delay: 0.5s;
+					}
+
+					@keyframes btn-anim3 {
+						0% {
+							right: -100%;
+						}
+						50%,
+						100% {
+							right: 100%;
+						}
+					}
+
+					span:nth-child(4) {
+						bottom: -100%;
+						left: 0;
+						width: 2px;
+						height: 100%;
+						background: linear-gradient(360deg, transparent, orange);
+						animation: btn-anim4 1s linear infinite;
+						animation-delay: 0.75s;
+					}
+
+					@keyframes btn-anim4 {
+						0% {
+							bottom: -100%;
+						}
+						50%,
+						100% {
+							bottom: 100%;
+						}
+					}
+
 					&:nth-of-type(2) {
-						background: #d83a3a;
+						cursor: pointer;
+						position: relative;
+						padding: 15px 35px;
+						color: #d83a3a;
+						background: transparent;
+						border: none;
+						font-size: 16px;
+						text-decoration: none;
+						text-transform: uppercase;
+						overflow: hidden;
+						transition: 0.5s;
+						margin-top: 40px;
+						letter-spacing: 4px;
+						&:hover {
+							background: #d83a3a;
+							color: #fff;
+							border-radius: 5px;
+							box-shadow: 0 0 5px #d83a3a, 0 0 25px #d83a3a, 0 0 50px #d83a3a,
+								0 0 100px #d83a3a;
+						}
+						span {
+							position: absolute;
+							display: block;
+						}
+
+						span:nth-child(1) {
+							top: 0;
+							left: -100%;
+							width: 100%;
+							height: 2px;
+							background: linear-gradient(90deg, transparent, #d83a3a);
+							animation: btn-anim5 1s linear infinite;
+						}
+
+						@keyframes btn-anim5 {
+							0% {
+								left: 100%;
+							}
+							50%,
+							100% {
+								left: -100%;
+							}
+						}
+
+						span:nth-child(2) {
+							top: -100%;
+							right: 0;
+							width: 2px;
+							height: 100%;
+							background: linear-gradient(180deg, transparent, #d83a3a);
+							animation: btn-anim6 1s linear infinite;
+							animation-delay: 0.25s;
+						}
+
+						@keyframes btn-anim6 {
+							0% {
+								top: 100%;
+							}
+							50%,
+							100% {
+								top: -100%;
+							}
+						}
+
+						span:nth-child(3) {
+							bottom: 0;
+							right: -100%;
+							width: 100%;
+							height: 2px;
+							background: linear-gradient(270deg, transparent, #d83a3a);
+							animation: btn-anim7 1s linear infinite;
+							animation-delay: 0.5s;
+						}
+
+						@keyframes btn-anim7 {
+							0% {
+								right: 100%;
+							}
+							50%,
+							100% {
+								right: -100%;
+							}
+						}
+
+						span:nth-child(4) {
+							bottom: -100%;
+							left: 0;
+							width: 2px;
+							height: 100%;
+							background: linear-gradient(360deg, transparent, #d83a3a);
+							animation: btn-anim8 1s linear infinite;
+							animation-delay: 0.75s;
+						}
+
+						@keyframes btn-anim8 {
+							0% {
+								bottom: 100%;
+							}
+							50%,
+							100% {
+								bottom: -100%;
+							}
+						}
 					}
 				}
 			}
 		}
 		.showBox {
 			width: 100%;
-			padding: 50px 0;
 			article {
-				background: #fff;
+				background: #222;
 				border-radius: 5px;
 				border: 1px solid #aaa;
 				padding: 30px;
@@ -50,13 +264,15 @@
 				justify-content: space-between;
 				flex-wrap: wrap;
 				align-content: flex-start;
-				flex-direction: column;
 
 				h2 {
 					margin-bottom: 10px;
+					color: #fff;
 				}
 				p {
 					margin-bottom: 10px;
+					color: #fff;
+					font-weight: 300;
 				}
 
 				.editTxt {
@@ -198,7 +414,7 @@ $GAP: 10px;
 		transition: all 0.5s;
 
 		li {
-			padding: $GAP $GAP / 2;
+			// padding: $GAP $GAP/2;
 			&:nth-child(2) {
 				animation-delay: 1s;
 				-webkit-animation-delay: 1s;
@@ -277,5 +493,19 @@ $GAP: 10px;
 				}
 			}
 		}
+	}
+}
+
+.ediTxt {
+	width: 100%;
+	input,
+	textarea {
+		background: transparent;
+		border: 1px solid #aaa;
+		padding: 15px 20px;
+		width: 100%;
+		color: #fff;
+		margin: 5px 0;
+		width: 100%;
 	}
 }

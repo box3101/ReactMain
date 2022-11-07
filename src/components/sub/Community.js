@@ -236,15 +236,31 @@ export default function Community() {
 
       <div className="wrap">
         <div className="inputBox">
-          <input type="text" placeholder="제목을 입력하세요" ref={input} />
+          <h2>Title</h2>
+          <input type="text" placeholder="Please enter a title
+" ref={input} />
           <span className="err"></span>
           <br />
-          <textarea cols="30" rows="5" placeholder="본문을 입력하세요." ref={textarea}>
+          <h2>Comment</h2>
+          <textarea cols="30" rows="5" placeholder="Please enter your text.
+" ref={textarea}>
           </textarea>
           <br />
           <div className="btnSet">
-            <button onClick={createPost}>WRITE</button>
-            <button onClick={resetForm}>CANCEL</button>
+            <button onClick={createPost}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Write
+            </button>
+            <button onClick={resetForm}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Cancle
+            </button>
           </div>
         </div>
 

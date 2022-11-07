@@ -22,6 +22,7 @@ header {
 			}
 			img {
 				position: relative;
+				left: -36px;
 			}
 		}
 		#gnb {
@@ -49,7 +50,7 @@ header {
 							top: 30px;
 							background: #000;
 							height: 2px;
-							background: #d83a3a;
+							background: orange;
 						}
 					}
 				}
@@ -88,7 +89,7 @@ header {
 		}
 	}
 	&.sub {
-		background-color: #191919;
+		background-color: #eee;
 		height: 100px;
 		padding: 10px;
 		transition: 0.5s height, 0.5s padding;
@@ -96,18 +97,23 @@ header {
 		align-items: center;
 		justify-content: space-between;
 		.inner {
+			h1 {
+				img {
+					filter: invert(1);
+				}
+			}
 			h1 a {
-				color: #fff;
+				color: #333;
 			}
 			#gnb li a {
 				display: block;
 				font-size: 15px;
 				font-weight: 500;
-				color: #fff !important;
+				color: #333 !important;
 				font-family: "Montserrat" !important;
 			}
 			.fa-bars {
-				color: #fff;
+				color: #333;
 			}
 		}
 	}

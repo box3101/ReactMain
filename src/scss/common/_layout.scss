@@ -1,13 +1,15 @@
 .content {
+	padding-bottom: 3%;
+	background: #222;
 	figure {
-		margin-top: 6% !important;
+		margin-top: 5% !important;
 		margin-bottom: 2% !important;
 		padding-top: 3% !important;
 	}
 	> .inner {
 		width: 1180px;
 		min-height: 400px;
-		margin: 30px auto 150px;
+		margin: 30px auto 0px;
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);
@@ -15,13 +17,13 @@
 		transition: 0.5s;
 		h1 {
 			text-align: center;
-			color: #263246;
+			color: #fff;
 			font-family: "Montserrat", Sans-serif;
 			font-size: 44px;
 			font-weight: 600;
-			margin-bottom: 15px;
+			margin-bottom: 35px;
 			&::after {
-				content: "";
+				// content: "";
 				display: block;
 				width: 600px;
 				height: 51px;

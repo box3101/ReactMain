@@ -89,10 +89,9 @@ export default function Gallery() {
     <>
       <Layout name={'Gallery'}>
         {Loading && (
-          <img
-            className="loading"
-            src={`${process.env.PUBLIC_URL}/img/6.gif`}
-          />
+          <div class="load-4">
+            <div class="ring-1"></div>
+          </div>
         )}
 
         <div className="controls">

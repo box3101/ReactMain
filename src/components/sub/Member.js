@@ -129,7 +129,7 @@ function Member() {
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend className='h'>회원가입 폼 양식</legend>
-          <table border='1'>
+          <table>
             <caption className='h'>회원가입 정보입력</caption>
             <tbody>
               {/* userid */}
@@ -205,7 +205,7 @@ function Member() {
               {/* gender */}
               <tr>
                 <th scope='row'>GENDER</th>
-                <td>
+                <td className='flex'>
                   <label htmlFor="male">MALE</label>
                   <input
                     type="radio"
@@ -225,7 +225,7 @@ function Member() {
               {/* check box */}
               <tr>
                 <th scope='row'>INTERESTS</th>
-                <td>
+                <td className='flex'>
                   <label htmlFor="sports">SPORTS</label>
                   <input type="checkbox" name="interests" id="sports"
                     onChange={handleCheck} />
@@ -261,16 +261,16 @@ function Member() {
               </tr>
               {/* btn set */}
               <tr>
-                <th colSpan='2'>
-                  <input
-                    type="reset"
-                    value="CANCLE"
-                    onClick={handleReset}
-                  />
+                <th colSpan='2' className='flex'>
                   <input
                     type="submit"
                     value="SEND"
                     onClick={() => setSubmit(true)}
+                  />
+                  <input
+                    type="reset"
+                    value="CANCLE"
+                    onClick={handleReset}
                   />
                 </th>
               </tr>
