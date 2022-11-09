@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useRef, useState } from 'react';
+// import { useRef, useState } from 'react';
 
 function Message() {
   const path = process.env.PUBLIC_URL;
@@ -22,6 +22,10 @@ function Message() {
                   <div className="inner">
                     <div className="pic">
                       <img src={`${path}/img/${data.pic}`} alt={data.name} />
+                      <figcaption><i class="ion-upload"></i>
+                        <h4>{data.age}</h4>
+                        <h2>{data.group}</h2>
+                      </figcaption>
                     </div>
                     <h3>{data.name}</h3>
                     <p>{data.krName}</p>
@@ -40,6 +44,10 @@ function Message() {
                   <div className="inner">
                     <div className="pic">
                       <img src={`${path}/img/${data.pic}`} alt={data.name} />
+                      <figcaption><i class="ion-upload"></i>
+                        <h4>{data.age}</h4>
+                        <h2>{data.group}</h2>
+                      </figcaption>
                     </div>
                     <h3>{data.name}</h3>
                     <p>{data.krName}</p>

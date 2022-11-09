@@ -1,6 +1,6 @@
 .content {
 	padding-bottom: 3%;
-	background: #222;
+	background: #fff;
 	figure {
 		margin-top: 5% !important;
 		margin-bottom: 2% !important;
@@ -17,11 +17,11 @@
 		transition: 0.5s;
 		h1 {
 			text-align: center;
-			color: #fff;
-			font-family: "Montserrat", Sans-serif;
-			font-size: 44px;
-			font-weight: 600;
-			margin-bottom: 35px;
+			color: #333;
+			// font-family: "Montserrat", Sans-serif;
+			font-size: 75px;
+			font-weight: 700;
+			margin-bottom: 55px;
 			&::after {
 				// content: "";
 				display: block;

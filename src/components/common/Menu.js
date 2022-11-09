@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 function Menu() {
   const url = process.env.PUBLIC_URL;
-  const active = { color: 'orange' };
+  const active = { color: '#d83a3a' };
 
   return (
     <nav>

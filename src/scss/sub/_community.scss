@@ -1,4 +1,19 @@
 .Community {
+	h2 {
+		color: #333;
+		margin-bottom: 20px;
+		font-size: 33px;
+		font-weight: 700;
+		text-transform: uppercase;
+		position: relative;
+		&::before {
+			position: relative;
+			top: -1px;
+			margin-right: 15px;
+			content: "★";
+			display: inline-block;
+		}
+	}
 	> .inner {
 		.wrap {
 			margin-top: 50px;
@@ -9,11 +24,10 @@
 			width: 100%;
 			padding: 50px 0;
 			margin-bottom: 50px;
-			h2 {
-				color: #fff;
-				margin-bottom: 20px;
-				font-size: 25px;
-				font-weight: 500;
+			&:nth-of-type(2) {
+				h2 {
+					margin-top: 30px;
+				}
 			}
 
 			input[type="text"],
@@ -21,8 +35,8 @@
 				width: 100%;
 				padding: 20px 10px;
 				border-radius: 5px;
-				background: #222;
-				border: 1px solid #aaa;
+				background: #fff;
+				border: 5px solid #333;
 				margin-bottom: 20px;
 				resize: none;
 				font-size: 15px;
@@ -39,10 +53,11 @@
 				justify-content: center;
 				gap: 15px;
 				button {
+					width: 160px;
 					cursor: pointer;
 					position: relative;
 					padding: 10px 20px;
-					color: orange;
+					color: #333;
 					background: transparent;
 					border: none;
 					font-size: 16px;
@@ -50,15 +65,16 @@
 					text-transform: uppercase;
 					overflow: hidden;
 					transition: 0.5s;
-					margin-top: 40px;
+					height: 48px;
 					letter-spacing: 4px;
 					font-weight: bold !important;
+					background: #333;
+					color: #fff;
+					border-radius: 5px;
 					&:hover {
-						background: orange;
-						color: #fff;
-						border-radius: 5px;
-						box-shadow: 0 0 5px orange, 0 0 25px orange, 0 0 50px orange,
-							0 0 100px orange;
+						box-shadow: inset 0 0 0 2em #fff;
+						outline: 1px solid #333;
+						color: #333;
 					}
 					span {
 						position: absolute;
@@ -70,7 +86,7 @@
 						left: -100%;
 						width: 100%;
 						height: 2px;
-						background: linear-gradient(90deg, transparent, orange);
+						background: linear-gradient(90deg, transparent, #333);
 						animation: btn-anim1 1s linear infinite;
 					}
 
@@ -89,7 +105,7 @@
 						right: 0;
 						width: 2px;
 						height: 100%;
-						background: linear-gradient(180deg, transparent, orange);
+						background: linear-gradient(180deg, transparent, #333);
 						animation: btn-anim2 1s linear infinite;
 						animation-delay: 0.25s;
 					}
@@ -109,7 +125,7 @@
 						right: -100%;
 						width: 100%;
 						height: 2px;
-						background: linear-gradient(270deg, transparent, orange);
+						background: linear-gradient(270deg, transparent, #333);
 						animation: btn-anim3 1s linear infinite;
 						animation-delay: 0.5s;
 					}
@@ -129,7 +145,7 @@
 						left: 0;
 						width: 2px;
 						height: 100%;
-						background: linear-gradient(360deg, transparent, orange);
+						background: linear-gradient(360deg, transparent, #333);
 						animation: btn-anim4 1s linear infinite;
 						animation-delay: 0.75s;
 					}
@@ -156,14 +172,15 @@
 						text-transform: uppercase;
 						overflow: hidden;
 						transition: 0.5s;
-						margin-top: 40px;
+						height: 48px;
 						letter-spacing: 4px;
+						background: #d83a3a;
+						color: #fff;
+						border-radius: 5px;
 						&:hover {
-							background: #d83a3a;
-							color: #fff;
-							border-radius: 5px;
-							box-shadow: 0 0 5px #d83a3a, 0 0 25px #d83a3a, 0 0 50px #d83a3a,
-								0 0 100px #d83a3a;
+							box-shadow: inset 0 0 0 2em #fff;
+							outline: 1px solid #d83a3a;
+							color: #333;
 						}
 						span {
 							position: absolute;
@@ -255,23 +272,28 @@
 		.showBox {
 			width: 100%;
 			article {
-				background: #222;
-				border-radius: 5px;
-				border: 1px solid #aaa;
+				background: #fff;
+				border: 2px solid #333;
+				border-right: none;
+				border-left: none;
 				padding: 30px;
-				margin-bottom: 40px;
+				margin-bottom: 15px;
 				display: flex;
 				justify-content: space-between;
 				flex-wrap: wrap;
 				align-content: flex-start;
+				position: relative;
 
 				h2 {
 					margin-bottom: 10px;
-					color: #fff;
+					color: #333;
+					&::before {
+						display: none;
+					}
 				}
 				p {
 					margin-bottom: 10px;
-					color: #fff;
+					color: #333;
 					font-weight: 300;
 				}
 
@@ -297,10 +319,10 @@
 						cursor: pointer;
 						border: none;
 						&:nth-of-type(1) {
-							color: orange;
+							color: #333;
 						}
 						&:nth-of-type(2) {
-							color: orangered;
+							color: #d83a3a;
 						}
 					}
 				}
@@ -331,12 +353,12 @@ $GAP: 10px;
 
 	transition: all 0.5s;
 	transition: background-size 0s;
-	transition: filter 1s;
+	transition: filter 0.2s;
 
 	&:hover,
 	&:focus {
 		cursor: pointer;
-		filter: grayscale(70%);
+		filter: grayscale(0%);
 	}
 
 	&[open] {
@@ -366,7 +388,7 @@ $GAP: 10px;
 		border-radius: 3px;
 		color: white;
 		display: inline-block;
-		margin: $GAP / 2 $GAP;
+		// margin: $GAP / 2 $GAP;
 		padding: $GAP $GAP * 2;
 		top: 0;
 		left: 0;
@@ -504,8 +526,34 @@ $GAP: 10px;
 		border: 1px solid #aaa;
 		padding: 15px 20px;
 		width: 100%;
-		color: #fff;
+		color: #333;
 		margin: 5px 0;
 		width: 100%;
+	}
+}
+
+button {
+	min-width: 160px;
+	cursor: pointer;
+	position: relative;
+	padding: 10px 20px;
+	color: #333;
+	background: transparent;
+	border: none;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	height: 48px;
+	letter-spacing: 4px;
+	font-weight: bold !important;
+	background: #333;
+	color: #fff;
+	border-radius: 5px;
+	&:hover {
+		box-shadow: inset 0 0 0 2em #fff;
+		outline: 1px solid #333;
+		color: #333;
 	}
 }

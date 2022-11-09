@@ -1,4 +1,9 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&family=Noto+Sans+KR:wght@100;300;400;500;900&display=swap");
+* {
+  text-transform: uppercase;
+}
+
 .inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -66,7 +71,7 @@ footer .inner p {
 }
 .content {
   padding-bottom: 3%;
-  background: #222;
+  background: #fff;
 }
 .content figure {
   margin-top: 5% !important;
@@ -84,11 +89,10 @@ footer .inner p {
 }
 .content > .inner h1 {
   text-align: center;
-  color: #fff;
-  font-family: "Montserrat", Sans-serif;
-  font-size: 44px;
-  font-weight: 600;
-  margin-bottom: 35px;
+  color: #333;
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 55px;
 }
 .content > .inner h1::after {
   display: block;
@@ -262,7 +266,7 @@ header .inner #gnb li a:hover::after {
   top: 30px;
   background: #000;
   height: 2px;
-  background: orange;
+  background: #d83a3a;
 }
 header .inner .fa-bars {
   font-size: 24px;
@@ -294,16 +298,13 @@ header.main .inner .fa-bars {
   color: #fff;
 }
 header.sub {
-  background-color: #eee;
+  background-color: #191919;
   height: 100px;
   padding: 10px;
   transition: 0.5s height, 0.5s padding;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-header.sub .inner h1 img {
-  filter: invert(1);
 }
 header.sub .inner h1 a {
   color: #333;
@@ -312,7 +313,7 @@ header.sub .inner #gnb li a {
   display: block;
   font-size: 15px;
   font-weight: 500;
-  color: #333 !important;
+  color: #fff !important;
   font-family: "Montserrat" !important;
 }
 header.sub .inner .fa-bars {
@@ -365,7 +366,7 @@ header.sub .inner .fa-bars {
 }
 .pop .close {
   font: bold 14px/1 "arial";
-  color: orange;
+  color: #d83a3a;
   position: absolute;
   top: 40px;
   right: 5vw;
@@ -498,8 +499,24 @@ header.sub .inner .fa-bars {
   width: 100% !important;
 }
 
-.visual {
-  padding-top: 120px;
+.vids .inner {
+  padding-top: 130px;
+}
+.vids .inner .pic img {
+  width: 100%;
+  height: 665px;
+  object-fit: cover;
+}
+.vids .inner iframe {
+  width: 100%;
+  height: 665px;
+}
+.vids .inner iframe video {
+  width: 100% !important;
+}
+
+.ytp-fit-cover-video .html5-main-video {
+  width: 100% !important;
 }
 
 .message {
@@ -545,6 +562,52 @@ header.sub .inner .fa-bars {
   display: flex;
   gap: 66px;
 }
+.message .inner .mem1 section .pic,
+.message .inner .mem2 section .pic {
+  position: relative;
+}
+.message .inner .mem1 section .pic::after,
+.message .inner .mem2 section .pic::after {
+  display: block;
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+.message .inner .mem1 section figcaption,
+.message .inner .mem2 section figcaption {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+.message .inner .mem1 section .pic:hover::after,
+.message .inner .mem2 section .pic:hover::after {
+  transform: rotateX(0);
+  opacity: 0.9;
+}
+.message .inner .mem1 section .pic:hover figcaption,
+.message .inner .mem2 section .pic:hover figcaption {
+  transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
 .message .inner .mem1 section h3,
 .message .inner .mem2 section h3 {
   margin-top: 10px;
@@ -567,6 +630,21 @@ header.sub .inner .fa-bars {
   padding: 6vw 7vw;
 }
 
+.Community h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.Community h2::before {
+  position: relative;
+  top: -1px;
+  margin-right: 15px;
+  content: "★";
+  display: inline-block;
+}
 .Community > .inner .wrap {
   margin-top: 50px;
   gap: 30px;
@@ -576,19 +654,16 @@ header.sub .inner .fa-bars {
   padding: 50px 0;
   margin-bottom: 50px;
 }
-.Community > .inner .inputBox h2 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 25px;
-  font-weight: 500;
+.Community > .inner .inputBox:nth-of-type(2) h2 {
+  margin-top: 30px;
 }
 .Community > .inner .inputBox input[type=text],
 .Community > .inner .inputBox textarea {
   width: 100%;
   padding: 20px 10px;
   border-radius: 5px;
-  background: #222;
-  border: 1px solid #aaa;
+  background: #fff;
+  border: 5px solid #333;
   margin-bottom: 20px;
   resize: none;
   font-size: 15px;
@@ -606,10 +681,11 @@ header.sub .inner .fa-bars {
   gap: 15px;
 }
 .Community > .inner .inputBox .btnSet button {
+  width: 160px;
   cursor: pointer;
   position: relative;
   padding: 10px 20px;
-  color: orange;
+  color: #333;
   background: transparent;
   border: none;
   font-size: 16px;
@@ -617,15 +693,17 @@ header.sub .inner .fa-bars {
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
-  margin-top: 40px;
+  height: 48px;
   letter-spacing: 4px;
   font-weight: bold !important;
-}
-.Community > .inner .inputBox .btnSet button:hover {
-  background: orange;
+  background: #333;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px orange, 0 0 25px orange, 0 0 50px orange, 0 0 100px orange;
+}
+.Community > .inner .inputBox .btnSet button:hover {
+  box-shadow: inset 0 0 0 2em #fff;
+  outline: 1px solid #333;
+  color: #333;
 }
 .Community > .inner .inputBox .btnSet button span {
   position: absolute;
@@ -636,7 +714,7 @@ header.sub .inner .fa-bars {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, orange);
+  background: linear-gradient(90deg, transparent, #333);
   animation: btn-anim1 1s linear infinite;
 }
 @keyframes btn-anim1 {
@@ -652,7 +730,7 @@ header.sub .inner .fa-bars {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, orange);
+  background: linear-gradient(180deg, transparent, #333);
   animation: btn-anim2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -669,7 +747,7 @@ header.sub .inner .fa-bars {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, orange);
+  background: linear-gradient(270deg, transparent, #333);
   animation: btn-anim3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -686,7 +764,7 @@ header.sub .inner .fa-bars {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, orange);
+  background: linear-gradient(360deg, transparent, #333);
   animation: btn-anim4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -710,14 +788,16 @@ header.sub .inner .fa-bars {
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
-  margin-top: 40px;
+  height: 48px;
   letter-spacing: 4px;
-}
-.Community > .inner .inputBox .btnSet button:nth-of-type(2):hover {
   background: #d83a3a;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #d83a3a, 0 0 25px #d83a3a, 0 0 50px #d83a3a, 0 0 100px #d83a3a;
+}
+.Community > .inner .inputBox .btnSet button:nth-of-type(2):hover {
+  box-shadow: inset 0 0 0 2em #fff;
+  outline: 1px solid #d83a3a;
+  color: #333;
 }
 .Community > .inner .inputBox .btnSet button:nth-of-type(2) span {
   position: absolute;
@@ -794,23 +874,28 @@ header.sub .inner .fa-bars {
   width: 100%;
 }
 .Community > .inner .showBox article {
-  background: #222;
-  border-radius: 5px;
-  border: 1px solid #aaa;
+  background: #fff;
+  border: 2px solid #333;
+  border-right: none;
+  border-left: none;
   padding: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-content: flex-start;
+  position: relative;
 }
 .Community > .inner .showBox article h2 {
   margin-bottom: 10px;
-  color: #fff;
+  color: #333;
+}
+.Community > .inner .showBox article h2::before {
+  display: none;
 }
 .Community > .inner .showBox article p {
   margin-bottom: 10px;
-  color: #fff;
+  color: #333;
   font-weight: 300;
 }
 .Community > .inner .showBox article .editTxt {
@@ -836,10 +921,10 @@ header.sub .inner .fa-bars {
   border: none;
 }
 .Community > .inner .showBox article .btnSet button:nth-of-type(1) {
-  color: orange;
+  color: #333;
 }
 .Community > .inner .showBox article .btnSet button:nth-of-type(2) {
-  color: orangered;
+  color: #d83a3a;
 }
 
 .boxes {
@@ -860,11 +945,11 @@ header.sub .inner .fa-bars {
   filter: grayscale(100%);
   transition: all 0.5s;
   transition: background-size 0s;
-  transition: filter 1s;
+  transition: filter 0.2s;
 }
 .boxes details:hover, .boxes details:focus {
   cursor: pointer;
-  filter: grayscale(70%);
+  filter: grayscale(0%);
 }
 .boxes details[open] {
   background-position: top left;
@@ -890,7 +975,6 @@ header.sub .inner .fa-bars {
   border-radius: 3px;
   color: white;
   display: inline-block;
-  margin: 5px 10px;
   padding: 10px 20px;
   top: 0;
   left: 0;
@@ -1014,14 +1098,40 @@ header.sub .inner .fa-bars {
   border: 1px solid #aaa;
   padding: 15px 20px;
   width: 100%;
-  color: #fff;
+  color: #333;
   margin: 5px 0;
   width: 100%;
 }
 
+button {
+  min-width: 160px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  color: #333;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  height: 48px;
+  letter-spacing: 4px;
+  font-weight: bold !important;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+button:hover {
+  box-shadow: inset 0 0 0 2em #fff;
+  outline: 1px solid #333;
+  color: #333;
+}
+
 .Department p {
   text-align: center;
-  color: #fff;
+  color: #333;
   font-family: "Raleway", Sans-serif;
   font-size: 22px;
   font-weight: 600;
@@ -1029,7 +1139,7 @@ header.sub .inner .fa-bars {
 }
 .Department H2 {
   text-align: center;
-  color: #fff;
+  color: #333;
   font-family: "Raleway", Sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -1037,12 +1147,12 @@ header.sub .inner .fa-bars {
 }
 .Department h3 {
   text-align: center;
-  color: #fff;
+  color: #333;
   font-weight: bold;
 }
 .Department p.name {
   text-align: center;
-  color: #fff;
+  color: #333;
   font-family: "Noto Sans KR", Sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1079,10 +1189,14 @@ header.sub .inner .fa-bars {
 .Department > .inner article .inner .pic:hover {
   filter: saturate(1.1);
 }
+.Department > .inner article .inner .pic:hover img {
+  filter: grayscale(0);
+}
 .Department > .inner article .inner .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(1);
 }
 
 @media screen and (max-width: 1179px) {
@@ -1120,36 +1234,21 @@ header.sub .inner .fa-bars {
   display: flex;
   gap: 20px;
 }
-.Gallery .controls nav button {
-  border: none;
-  width: 130px;
-  height: 30px;
-  background: #555;
-  font: 12px/30px "arial";
-  color: #ddd;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
 .Gallery .controls .searchBox {
   padding-right: 15px;
 }
 .Gallery .controls .searchBox input {
+  margin-right: 10px;
   width: 200px;
-  height: 26px;
-  background: #fff;
-  border: 1px solid #bbb;
+  height: 48px;
+  border: 2px solid #333;
   padding: 3px 8px;
+  color: #333;
+  font-weight: bold;
 }
-.Gallery .controls .searchBox button {
-  width: 80px;
-  height: 26px;
-  border: none;
-  background: #555;
-  font: 12px/26px "arial";
-  color: #fff;
-  cursor: pointer;
-  margin-left: 5px;
+.Gallery .controls .searchBox input ::placeholder {
+  color: #333;
+  font-weight: bold;
 }
 .Gallery .frame {
   transform: translateY(200px);
@@ -1173,9 +1272,12 @@ header.sub .inner .fa-bars {
 .Gallery .frame article .inner {
   width: 100%;
   padding: 10px;
-  background: #eee;
+  background: #fff;
+  border: 5px solid #333;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   cursor: pointer;
+  height: 320px;
+  margin-bottom: 15px;
 }
 .Gallery .frame article .inner .pic {
   width: 100%;
@@ -1183,11 +1285,19 @@ header.sub .inner .fa-bars {
 }
 .Gallery .frame article .inner .pic img {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 .Gallery .frame article .inner h2 {
-  font: normal 14px/1.2 "arial";
-  color: #777;
-  margin-bottom: 30px;
+  font: normal 20px/1.2 "arial";
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .Gallery .frame article .inner .profile {
   display: flex;
@@ -1199,10 +1309,11 @@ header.sub .inner .fa-bars {
   margin-right: 10px;
 }
 .Gallery .frame article .inner .profile span {
-  color: orange;
+  color: #d83a3a;
   cursor: pointer;
   transition: 0.5s;
-  font-size: 21px;
+  margin-top: 10px;
+  font-size: 15px;
   word-break: break-all;
 }
 .Gallery .frame article .inner .profile span:hover {
@@ -1237,7 +1348,7 @@ header.sub .inner .fa-bars {
   height: 50px;
   margin: 0 auto;
   padding: 50px;
-  border: 7px dashed orange;
+  border: 7px dashed #d83a3a;
   border-radius: 100%;
 }
 
@@ -1286,8 +1397,8 @@ header.sub .inner .fa-bars {
   transition: 0.5s;
 }
 .Location .btnSet ul li.on {
-  background: orange;
-  border: 1px solid orange;
+  background: #d83a3a;
+  border: 1px solid #d83a3a;
   color: #fff;
 }
 
@@ -1378,7 +1489,7 @@ header.sub .inner .fa-bars {
 }
 .Member > .inner form input[type=submit] {
   padding: 10px 15px;
-  background-color: orange;
+  background-color: #d83a3a;
   color: #fff;
   border-bottom: transparent;
 }
@@ -1423,26 +1534,29 @@ header.sub .inner .fa-bars {
 .Youtube .section-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 .Youtube article {
-  width: calc(33% - 30px);
+  width: calc(25% - 15px);
   border-top: 1px solid #aaa;
-  padding: 20px 0px;
+  background: #fff;
+  border: 5px solid #333;
+  padding: 10px;
   justify-content: space-between;
 }
 .Youtube article img {
   width: 100%;
 }
 .Youtube article h3 {
+  font: normal 20px/1.2 "arial";
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: bold;
-  font-size: 18px;
-  font-family: "work sans";
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  min-height: 50px;
+  margin-bottom: 10px;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .Youtube article .txt {
   width: 100%;
@@ -1460,7 +1574,7 @@ header.sub .inner .fa-bars {
 }
 .Youtube article .txt span {
   font: 13px/1 "arial";
-  color: orange;
+  color: #d83a3a;
 }
 .Youtube article .pic {
   width: 100%;
@@ -1471,7 +1585,6 @@ header.sub .inner .fa-bars {
 .Youtube article .pic img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .Youtube article .pic:hover {
   filter: saturate(1.2);

@@ -1,17 +1,16 @@
-import React from "react"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
-// import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-// import { faBlog } from "@fortawesome/free-solid-svg-icons";
-// import { faPortrait } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+// import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player'
 
-export default function Visual() {
-
+function Vids() {
     return (
-        <figure id="visual" className="visual">
-            <div className="inner">
-
-            </div>
-        </figure >
-    )
+        <>
+            <main id="vids" className='myScroll'>
+                <div className="inner">
+                    <iframe id="ytplayer" src="https://www.youtube.com/embed/kYRh3hxfD_s?autoplay=1&loop=1&mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+            </main>
+        </>
+    );
 }
+export default Vids;

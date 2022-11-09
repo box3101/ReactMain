@@ -7,7 +7,7 @@ import Menu from "./Menu";
 
 
 export default function Header(props) {
-    const active = { color: 'orange' };
+    const active = { color: '#d83a3a' };
 
     let url = '';
     props.type === 'main'

@@ -2,12 +2,15 @@
 	.section-wrap {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 40px;
+		gap: 20px;
 	}
 	article {
-		width: calc(33% - 30px);
+		width: calc(25% - 15px);
 		border-top: 1px solid #aaa;
-		padding: 20px 0px;
+		background: #fff;
+		border: 5px solid #333;
+		padding: 10px;
+		// padding: 20px 0px;
 		// display: flex;
 		// flex-wrap: wrap;
 		justify-content: space-between;
@@ -15,14 +18,15 @@
 			width: 100%;
 		}
 		h3 {
+			font: normal 20px/1.2 "arial";
 			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
 			font-weight: bold;
-			font-size: 18px;
-			font-family: "work sans";
-			color: #fff;
-			margin-top: 20px;
-			margin-bottom: 5px;
-			min-height: 50px;
+			margin-bottom: 10px;
+			color: #333;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 		.txt {
 			width: 100%;
@@ -39,7 +43,7 @@
 			}
 			span {
 				font: 13px/1 "arial";
-				color: orange;
+				color: #d83a3a;
 			}
 		}
 		.pic {
@@ -51,7 +55,6 @@
 			img {
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
 			}
 			&:hover {
 				filter: saturate(1.2);

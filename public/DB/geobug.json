@@ -3,17 +3,23 @@
         {
             "name": "JAYB",
             "krName": "송재엽",
-            "pic": "member4.jpg"
+            "pic": "member4.jpg",
+            "age": "JAYB",
+            "group": "송재엽"
         },
         {
             "name": "동주쓰",
             "krName": "박동주",
-            "pic": "member5.jpg"
+            "pic": "member5.jpg",
+            "age": "동주쓰",
+            "group": "박동주"
         },
         {
             "name": "WOOD",
             "krName": "문성훈",
-            "pic": "member6.jpg"
+            "pic": "member6.jpg",
+            "age": "WOOD",
+            "group": "문성훈"
         }
     ]
 }

@@ -3,17 +3,23 @@
         {
             "name": "RIAN",
             "krName": "최리안",
-            "pic": "member1.jpg"
+            "pic": "member1.jpg",
+            "age": "RIAN",
+            "group": "최리안"
         },
         {
             "name": "GABEE",
             "krName": "신가비",
-            "pic": "member2.jpg"
+            "pic": "member2.jpg",
+            "age": "GABEE",
+            "group": "신가비"
         },
         {
             "name": "SIMEEZ",
             "krName": "심희정",
-            "pic": "member3.jpg"
+            "pic": "member3.jpg",
+            "age": "SIMEEZ",
+            "group": "심희정"
         }
     ]
 }

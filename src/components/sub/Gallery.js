@@ -146,7 +146,6 @@ export default function Gallery() {
                         setIndex(idx);
                       }}
 
-
                     >
 
                       <img
